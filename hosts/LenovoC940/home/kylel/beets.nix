@@ -13,12 +13,12 @@
         timid: no
         log: ${config.home.homeDirectory}/.config/beets/beets.log
 
-    plugins: lyrics embedart fetchart
+    plugins: lyrics embedart fetchart lastgenre
 
     lyrics:
         auto: yes
         fallback: \'\'
-        sources: genius
+        sources: [lrclib, google, genius, tekstowo]
 
     embedart:
         auto: yes
@@ -30,5 +30,8 @@
         cautious: yes
         maxwidth: 1200
         enforce_ratio: yes
+
+    lastgenre:
+        auto: yes
   '';
 }
