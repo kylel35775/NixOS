@@ -1,10 +1,8 @@
 {
   pkgs,
-  lib,
   config,
   ...
-}:
-with lib; {
+}: {
   # home.file."./.config/waybar" = {
   #   enable = true;
   #   source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/.config/";
@@ -57,9 +55,15 @@ with lib; {
           "reverse-direction" = true;
         };
         "pulseaudio" = {
-          "format" = "{icon} {volume}% {format_source}";
-          "format-bluetooth" = "{volume}% {icon} {format_source}";
-          "format-bluetooth-muted" = " {icon} {format_source}";
+          "on-click" = "sleep 0.1 && pavucontrol";
+          "tooltip-format" = "{desc}: {volume}%";
+
+          "format" = "{icon}{format_source}";
+          "format-muted" = "{format_source}";
+          "format-source" = ""; # "";
+          "format-source-muted" = " ";
+          "format-bluetooth" = "{icon}|{format_source}";
+          "format-bluetooth-muted" = "|{format_source}";
           "format-icons" = {
             "car" = "";
             "default" = [
@@ -73,14 +77,10 @@ with lib; {
             "phone" = "";
             "portable" = "";
           };
-          "format-muted" = " {format_source}";
-          "format-source" = " {volume}%";
-          "format-source-muted" = "";
-          "on-click" = "sleep 0.1 && pavucontrol";
         };
         "battery" = {
-          "format" = "{icon} {capacity}%";
-          "format-charging" = "󰂄 {capacity}%";
+          "format" = "{icon}";
+          "format-charging" = "󰂄";
           "format-icons" = [
             "󰁺"
             "󰁻"
@@ -93,12 +93,12 @@ with lib; {
             "󰂂"
             "󰁹"
           ];
-          "format-plugged" = "󱘖 {capacity}%";
+          "format-plugged" = "󱘖 ";
           "states" = {
             "critical" = 15;
             "warning" = 30;
           };
-          "tooltip" = false;
+          "tooltip-format" = "Battery: {capacity}%";
         };
         "clock" = {
           "format" = "<span><small>{:%H:%M %p%n%D}</small></span>";

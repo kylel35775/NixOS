@@ -11,7 +11,6 @@ in {
       "$modifier,B,exec,${browser}"
       "$modifier,Y,exec,kitty -e yazi"
       "$modifier,E,exec,emopicker9000"
-      "$modifier,S,exec,screenshootin"
       "$modifier,D,exec,discord"
       "$modifier,O,exec,obs"
       "$modifier,C,exec,hyprpicker -a"
@@ -79,24 +78,26 @@ in {
       "ALT,Tab,cyclenext"
       "ALT,Tab,bringactivetotop"
 
+      # Function keys
+      ", Print, exec, screenshootin"
       # ",XF86PowerOff"
     ];
 
     # bind[l] - Allow keybinds to bypass lock screen
     bindl = [
-      ",XF86AudioRaiseVolume,exec,wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+"
-      ",XF86AudioLowerVolume,exec,wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
-      ",XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+      ", XF86AudioRaiseVolume, exec, wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+"
+      ", XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
+      ", XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
 
-      ",XF86AudioPlay, exec, playerctl play-pause"
-      ",XF86AudioPause, exec, playerctl play-pause"
-      ",XF86AudioNext, exec, playerctl next"
-      ",XF86AudioPrev, exec, playerctl previous"
+      ", XF86AudioPlay, exec, playerctl play-pause"
+      ", XF86AudioPause, exec, playerctl play-pause"
+      ", XF86AudioNext, exec, playerctl next"
+      ", XF86AudioPrev, exec, playerctl previous"
 
-      ",XF86AudioMicMute, exec, wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
+      ", XF86AudioMicMute, exec, wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
 
-      ",XF86MonBrightnessDown,exec,brightnessctl set 5%-"
-      ",XF86MonBrightnessUp,exec,brightnessctl set 5%+"
+      ", XF86MonBrightnessDown, exec, brightnessctl set 5%-"
+      ", XF86MonBrightnessUp, exec, brightnessctl set 5%+"
     ];
 
     # bind[m] - Mouse keybinds
