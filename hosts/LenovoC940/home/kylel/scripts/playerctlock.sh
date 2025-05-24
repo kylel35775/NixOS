@@ -1,6 +1,6 @@
 
 if [ $# -eq 0 ]; then
-  echo "Usage: $0 --title | --arturl | --artist | --length | --album | --source"
+  echo "Usage: $0 --title | --arturl | --artist | --length | --position | --time | --album | --source"
   exit 1
 fi
 
@@ -15,14 +15,16 @@ get_metadata() {
 # Function to determine the source and return an icon and text
 get_source_info() {
   trackid=$(get_metadata "mpris:trackid")
-  if [[ "$trackid" == *"firefox"* ]]; then
+  if [[ -z "$trackid" ]]; then
+    echo ""
+  elif [[ "$trackid" == *"firefox"* ]]; then
     echo -e "Firefox 󰈹"
   elif [[ "$trackid" == *"spotify"* ]]; then
     echo -e "Spotify "
   elif [[ "$trackid" == *"chromium"* ]]; then
     echo -e "Chrome "
   else
-    echo "Media Player"
+    echo -e "Media Player"
   fi
 }
 
@@ -72,8 +74,10 @@ case "$1" in
   fi
   ;;
 --time)
-  time="$(get_metadata "duration(position)") / $(get_metadata "duration(mpris:length)")"
-  if [ -z "$time" ]; then
+  position=$(get_metadata "duration(position)")
+  length=$(get_metadata "duration(mpris:length)")
+  time="$position / $length"
+  if [ -z "$position" ]; then
     echo ""
   else
     echo "$time"
@@ -96,7 +100,7 @@ case "$1" in
   else
     status=$(playerctl status 2>/dev/null)
     if [[ -n $status ]]; then
-      echo "Not album"
+      echo ""
     else
       echo ""
     fi
@@ -107,7 +111,7 @@ case "$1" in
   ;;
 *)
   echo "Invalid option: $1"
-  echo "Usage: $0 --title | --url | --artist | --length | --album | --source"
+  echo "Usage: $0 --title | --arturl | --artist | --length | --position | --time | --album | --source"
   exit 1
   ;;
 esac

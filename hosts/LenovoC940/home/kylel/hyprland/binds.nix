@@ -91,6 +91,7 @@ in {
 
       ", XF86AudioPlay, exec, playerctl play-pause"
       ", XF86AudioPause, exec, playerctl play-pause"
+      ", XF86AudioStop, exec, playerctl stop"
       ", XF86AudioNext, exec, playerctl next"
       ", XF86AudioPrev, exec, playerctl previous"
 

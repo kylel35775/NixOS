@@ -13,6 +13,8 @@ in {
     swappy # Wayland Screenshot Editor
     hyprpicker # Wayland Color Picker
 
+    swayosd # GTK OSD Window for Keyboard Shortcuts
+
     wl-clipboard # CLI Copy/Paste Utility;
     clipse # TUI Clipboard Utility; Works with wl-clipboard
 
