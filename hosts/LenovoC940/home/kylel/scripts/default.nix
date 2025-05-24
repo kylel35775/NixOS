@@ -10,5 +10,7 @@
     (import ./rofi-launcher.nix {inherit pkgs;})
     (import ./screenshootin.nix {inherit pkgs;})
     (import ./yt-music.nix {inherit pkgs;})
+    (import ./playerctlock.nix {inherit pkgs;})
+    (import ./infonlock.nix {inherit pkgs;})
   ];
 }

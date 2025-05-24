@@ -6,14 +6,20 @@
   inherit (import ../../../system-variables.nix) keyboardLayout;
 in {
   home.packages = with pkgs; [
-    swww
-    grim
-    slurp
-    wl-clipboard
-    swappy
-    ydotool
-    hyprpolkitagent
-    hyprland-qtutils # needed for banners and ANR messages
+    swww # Wallpaper Daemon
+
+    grim # CLI Screenshot Utility; Works well with Slurp
+    slurp # Wayland Region Selector; Works well with Grim
+    swappy # Wayland Screenshot Editor
+    hyprpicker # Wayland Color Picker
+
+    wl-clipboard # CLI Copy/Paste Utility;
+    clipse # TUI Clipboard Utility; Works with wl-clipboard
+
+    ydotool # CLI Automation Tool
+
+    hyprpolkitagent # Polkit authentication agent written in QT/QML
+    hyprland-qtutils # Needed for banners and ANR messages
   ];
   systemd.user.targets.hyprland-session.Unit.Wants = [
     "xdg-desktop-autostart.target"
