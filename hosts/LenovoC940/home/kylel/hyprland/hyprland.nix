@@ -13,8 +13,6 @@ in {
     swappy # Wayland Screenshot Editor
     hyprpicker # Wayland Color Picker
 
-    swayosd # GTK OSD Window for Keyboard Shortcuts
-
     wl-clipboard # CLI Copy/Paste Utility;
     clipse # TUI Clipboard Utility; Works with wl-clipboard
 
@@ -23,6 +21,12 @@ in {
     hyprpolkitagent # Polkit authentication agent written in QT/QML
     hyprland-qtutils # Needed for banners and ANR messages
   ];
+  # GTK OSD Window Dropdown for Keyboard Shortcuts/Settings changes
+  services.swayosd = {
+    enable = true;
+    package = pkgs.swayosd;
+  };
+
   systemd.user.targets.hyprland-session.Unit.Wants = [
     "xdg-desktop-autostart.target"
   ];
