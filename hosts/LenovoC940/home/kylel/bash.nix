@@ -1,13 +1,15 @@
 {profile, ...}: {
   programs.bash = {
-    enable = false;
+    enable = true;
     enableCompletion = true;
+
     initExtra = ''
       fastfetch
       if [ -f $HOME/.bashrc-personal ]; then
         source $HOME/.bashrc-personal
       fi
     '';
+
     shellAliases = {
       sv = "sudo nvim";
       fr = "nh os switch --hostname ${profile}";

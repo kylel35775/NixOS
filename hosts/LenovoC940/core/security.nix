@@ -1,8 +1,10 @@
-_: {
+{
   security = {
     rtkit.enable = true;
+
     polkit = {
       enable = true;
+
       extraConfig = ''
         polkit.addRule(function(action, subject) {
           if ( subject.isInGroup("users") && (
@@ -15,6 +17,7 @@ _: {
         })
       '';
     };
+
     pam.services.swaylock = {
       text = ''auth include login '';
     };

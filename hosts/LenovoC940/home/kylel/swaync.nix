@@ -6,6 +6,7 @@
 
   services.swaync = {
     enable = true;
+
     settings = {
       "$schema" = "/etc/xdg/swaync/configSchema.json";
       "positionX" = "right";
@@ -88,6 +89,7 @@
         };
       };
     };
+
     style = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/.config/swaync/style.css";
     # ''
     #   /* ==================================================================

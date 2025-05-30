@@ -1,10 +1,16 @@
-{pkgs, ...}: let
+{
+  inputs,
+  pkgs,
+  ...
+}: let
   inherit (import ../system-variables.nix) stylixImage;
 in {
-  # Styling Options
+  imports = [inputs.stylix.nixosModules.stylix];
   stylix = {
     enable = true;
+
     image = ../home/wallpapers/${stylixImage};
+    # Manual alternative to 'image' option:
     # base16Scheme = {
     #   base00 = "282936";
     #   base01 = "3a3c4e";
@@ -23,26 +29,32 @@ in {
     #   base0E = "b45bcf";
     #   base0F = "00f769";
     # };
+
     polarity = "dark";
     opacity.terminal = 1.0;
+
     cursor = {
       package = pkgs.bibata-cursors;
       name = "Bibata-Modern-Ice";
       size = 24;
     };
+
     fonts = {
       monospace = {
         package = pkgs.nerd-fonts.jetbrains-mono;
         name = "JetBrains Mono";
       };
+
       sansSerif = {
         package = pkgs.montserrat;
         name = "Montserrat";
       };
+
       serif = {
         package = pkgs.montserrat;
         name = "Montserrat";
       };
+
       sizes = {
         applications = 12;
         terminal = 15;

@@ -1,13 +1,16 @@
 
-if [ $# -eq 0 ]; then
-  echo "Usage: $0 --title | --arturl | --artist | --length | --position | --time | --album | --source"
-  exit 1
-fi
-
 # Function to get metadata using playerctl
 get_metadata() {
   key=$1
-  playerctl metadata --format "{{ $key }}" 2>/dev/null
+  limit=$2 # Character Limit
+
+  metadata=$(playerctl metadata --format "{{ $key }}" 2>/dev/null)
+  if [[ ${#metadata} -gt $limit ]]; then
+    # Allocate 3 characters for ellipses
+    metadata="${metadata:0:$(( limit - 3 ))}..."
+  fi
+
+  echo $metadata
 }
 
 # Check for arguments
@@ -28,15 +31,25 @@ get_source_info() {
   fi
 }
 
+limit=40
+if [ $# -eq 0 ]; then
+  # echo "Usage: $0 --title | --arturl | --artist | --length | --position | --time | --album | --source"
+  title=$(get_metadata "title" $limit)
+  album=$(get_metadata "album" $limit)
+  artist=$(get_metadata "artist" $limit)
+
+  time="$(get_metadata "duration(position)" $limit) / $(get_metadata "duration(mpris:length)" $limit)"
+  
+  echo -e "$title\n$album\n$artist\n$time"
+
+  exit 1
+fi
+
 # Parse the argument
 case "$1" in
 --title)
-  title=$(get_metadata "xesam:title")
-  if [ -z "$title" ]; then
-    echo ""
-  else
-    echo "${title:0:35}" 
-  fi
+  title=$(get_metadata "xesam:title" $limit)
+  echo $title
   ;;
 --arturl)
   url=$(get_metadata "mpris:artUrl")

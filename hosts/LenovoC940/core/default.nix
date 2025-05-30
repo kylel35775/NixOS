@@ -1,4 +1,4 @@
-{inputs, ...}: {
+{
   imports = [
     ./boot.nix
     ./flatpak.nix
@@ -10,6 +10,7 @@
     ./nfs.nix
     ./nh.nix
     ./packages.nix
+    ./power-management.nix
     ./printing.nix
     ./security.nix
     ./services.nix
@@ -21,6 +22,5 @@
     ./thunar.nix
     ./virtualisation.nix
     ./xserver.nix
-    inputs.stylix.nixosModules.stylix
   ];
 }

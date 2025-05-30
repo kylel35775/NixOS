@@ -1,4 +1,4 @@
-_: {
+{
   home.file = {
     ".config/amfora/config.toml".text = ''
       [a-general]

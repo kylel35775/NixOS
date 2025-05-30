@@ -1,4 +1,4 @@
-_: let
+let
   inherit (import ../system-variables.nix) enableNFS;
 in {
   services = {

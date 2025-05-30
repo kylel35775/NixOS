@@ -17,6 +17,7 @@
         else true;
       autodetect = true;
     };
+
     pipewire = {
       enable = true;
       alsa.enable = true;

@@ -1,12 +1,14 @@
-_: {
+{
   programs.cava = {
     enable = true;
+
     settings = {
       general = {
         bar_spacing = 1;
         bar_width = 2;
         frame_rate = 60;
       };
+
       color = {
         #gradient = 1;
         #gradient_color_1 = "'#011f30'";
@@ -17,6 +19,7 @@ _: {
         #gradient_color_6 = "'#cc8033'";
         #gradient_color_7 = "'#aa0000'";
         #gradient_color_8 = "'#ff00ff'";
+
         # Old config
         #gradient = 1;
         #gradient_color_1 = "'#8bd5ca'";
@@ -27,6 +30,7 @@ _: {
         #gradient_color_6 = "'#f5bde6'";
         #gradient_color_7 = "'#ee99a0'";
         #gradient_color_8 = "'#ed8796'";
+
         # Dracula
         gradient = 1;
         gradient_color_1 = "'#8BE9FD'";
@@ -41,4 +45,3 @@ _: {
     };
   };
 }
-

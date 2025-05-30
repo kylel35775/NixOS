@@ -1,4 +1,4 @@
-_: let
+let
   inherit (import ../user-variables.nix) animChoice;
 in {
   imports = [

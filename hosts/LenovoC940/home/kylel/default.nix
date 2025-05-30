@@ -1,18 +1,12 @@
-{
-  pkgs,
-  inputs,
-  ...
-}: let
+{pkgs, ...}: let
   username = builtins.baseNameOf (builtins.toString ./.);
   inherit (import ./user-variables.nix) waybarChoice;
   imports = [
     ./amfora.nix
     ./bash.nix
-    ./bashrc-personal.nix
     ./bat.nix
     ./beets.nix
     ./btop.nix
-    ./calcure.nix
     ./cava.nix
     ./emoji.nix
     ./fastfetch
@@ -35,7 +29,6 @@
     ./virtmanager.nix
     ./wallrizz
     ./waybar/${waybarChoice}
-    ./wezterm.nix
     ./wlogout
     ./yazi
     ./xdg.nix

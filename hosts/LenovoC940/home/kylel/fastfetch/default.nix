@@ -12,7 +12,7 @@
       };
 
       logo = {
-        source = ./nixos.png;
+        source = ./nix-snowflake-colours.svg;
         type = "kitty-direct";
         height = 10;
         width = 20;
@@ -24,9 +24,10 @@
 
       modules = [
         "break"
+
         {
           type = "os";
-          key = "OS - ZaneyOS v2.3";
+          key = "OS   ";
           keyColor = "31";
         }
         {
@@ -44,7 +45,9 @@
           key = " └  ";
           keyColor = "31";
         }
+
         "break"
+
         {
           type = "wm";
           key = "WM   ";
@@ -75,7 +78,9 @@
           key = " └  ";
           keyColor = "32";
         }
+
         "break"
+
         {
           type = "host";
           format = "{5} {1} Type {2}";
@@ -119,7 +124,9 @@
           key = " └ 󰝚 ";
           keyColor = "33";
         }
+
         "break"
+
         {
           type = "uptime";
           key = "   Uptime   ";

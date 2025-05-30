@@ -1,4 +1,4 @@
-_: let
+let
   inherit (import ../user-variables.nix) browser terminal;
 in {
   wayland.windowManager.hyprland.settings = {
@@ -88,14 +88,13 @@ in {
       ", XF86AudioRaiseVolume, exec, swayosd-client --output-volume=raise"
       ", XF86AudioLowerVolume, exec, swayosd-client --output-volume=lower"
       ", XF86AudioMute, exec, swayosd-client --output-volume=mute-toggle"
+      ", XF86AudioMicMute, exec, swayosd-client --input-volume=mute-toggle"
 
       ", XF86AudioPlay, exec, swayosd-client --playerctl=play-pause"
       ", XF86AudioPause, exec, swayosd-client --playerctl=play-pause"
       ", XF86AudioStop, exec, swayosd-client --playerctl=stop"
-      ", XF86AudioNext, exec, swayosd-client --playerctl=next"
       ", XF86AudioPrev, exec, swayosd-client --playerctl=prev"
-
-      ", XF86AudioMicMute, exec, swayosd-client --input-volume=mute-toggle"
+      ", XF86AudioNext, exec, swayosd-client --playerctl=next"
 
       ", XF86MonBrightnessUp, exec, swayosd-client --brightness=raise"
       ", XF86MonBrightnessDown, exec, swayosd-client --brightness=lower"

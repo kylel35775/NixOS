@@ -2,6 +2,7 @@
   programs.kitty = {
     enable = true;
     package = pkgs.kitty;
+
     settings = {
       font_size = 12;
       wheel_scroll_min_lines = 1;
@@ -20,6 +21,7 @@
       #tab_bar_style = "fade";
       enabled_layouts = "splits";
     };
+
     extraConfig = ''
 
       # Clipboard
@@ -56,8 +58,10 @@
       map ctrl+shift+6        sixth_window
       map ctrl+shift+7        seventh_window
       map ctrl+shift+8        eighth_window
-      map ctrl+shift+9        ninth_window # Tab management
+      map ctrl+shift+9        ninth_window
       map ctrl+shift+0        tenth_window
+
+      # Tab management
       map ctrl+shift+right    next_tab
       map ctrl+shift+left     previous_tab
       map ctrl+shift+t        new_tab

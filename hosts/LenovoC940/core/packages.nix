@@ -7,6 +7,7 @@
     fuse.userAllowOther = true;
     mtr.enable = true;
     adb.enable = true;
+
     gnupg.agent = {
       enable = true;
       enableSSHSupport = true;
@@ -36,6 +37,7 @@
     htop # Simple Terminal Based System Monitor
     eog # For Image Viewing
     inxi # CLI System Information Tool
+    jq # CLI JSON Processor
     keepassxc # Offline Password Manager
     killall # For Killing All Instances Of Programs
     libnotify # For Notifications

@@ -13,16 +13,17 @@
 
   outputs = {nixpkgs, ...} @ inputs: let
     system = "x86_64-linux";
-    host = "LenovoC940";
     profile = "nvidia-laptop";
+    host = "LenovoC940";
   in {
     nixosConfigurations = {
       amd = nixpkgs.lib.nixosSystem {
         inherit system;
+
         specialArgs = {
           inherit inputs;
-          inherit host;
           inherit profile;
+          inherit host;
         };
         modules = [
           ./profiles/amd
@@ -31,10 +32,11 @@
       };
       nvidia = nixpkgs.lib.nixosSystem {
         inherit system;
+
         specialArgs = {
           inherit inputs;
-          inherit host;
           inherit profile;
+          inherit host;
         };
         modules = [
           ./profiles/nvidia
@@ -43,10 +45,11 @@
       };
       nvidia-laptop = nixpkgs.lib.nixosSystem {
         inherit system;
+
         specialArgs = {
           inherit inputs;
-          inherit host;
           inherit profile;
+          inherit host;
         };
         modules = [
           ./profiles/nvidia-laptop
@@ -55,10 +58,11 @@
       };
       intel = nixpkgs.lib.nixosSystem {
         inherit system;
+
         specialArgs = {
           inherit inputs;
-          inherit host;
           inherit profile;
+          inherit host;
         };
         modules = [
           ./profiles/intel
@@ -67,10 +71,11 @@
       };
       vm = nixpkgs.lib.nixosSystem {
         inherit system;
+
         specialArgs = {
           inherit inputs;
-          inherit host;
           inherit profile;
+          inherit host;
         };
         modules = [
           ./profiles/vm

@@ -21,6 +21,7 @@ in {
     hyprpolkitagent # Polkit authentication agent written in QT/QML
     hyprland-qtutils # Needed for banners and ANR messages
   ];
+
   # GTK OSD Window Dropdown for Keyboard Shortcuts/Settings changes
   services.swayosd = {
     enable = true;
@@ -30,26 +31,32 @@ in {
   systemd.user.targets.hyprland-session.Unit.Wants = [
     "xdg-desktop-autostart.target"
   ];
+
   # Place Files Inside Home Directory
   home.file = {
     "Pictures/Wallpapers" = {
       source = ../../wallpapers;
       recursive = true;
     };
+
     ".face.icon".source = ./face.jpg;
     ".config/face.jpg".source = ./face.jpg;
   };
+
   wayland.windowManager.hyprland = {
     enable = true;
     package = pkgs.hyprland;
+
     systemd = {
       enable = true;
       enableXdgAutostart = true;
       variables = ["--all"];
     };
+
     xwayland = {
       enable = true;
     };
+
     settings = {
       exec-once = [
         "dbus-update-activation-environment --all --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
@@ -73,6 +80,7 @@ in {
         follow_mouse = 1;
         float_switch_override_focus = 0;
         sensitivity = 0;
+
         touchpad = {
           natural_scroll = true;
           disable_while_typing = true;
@@ -123,6 +131,7 @@ in {
 
       decoration = {
         rounding = 10;
+
         blur = {
           enabled = true;
           size = 5;
@@ -130,6 +139,7 @@ in {
           ignore_opacity = false;
           new_optimizations = true;
         };
+
         shadow = {
           enabled = true;
           range = 4;

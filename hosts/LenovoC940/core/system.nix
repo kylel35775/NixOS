@@ -1,10 +1,11 @@
-_: let
+let
   inherit (import ../system-variables.nix) consoleKeyMap;
 in {
   nix = {
     settings = {
       download-buffer-size = 250000000;
       auto-optimise-store = true;
+
       experimental-features = [
         "nix-command"
         "flakes"
@@ -13,6 +14,7 @@ in {
       trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="];
     };
   };
+
   time.timeZone = "America/Chicago";
   i18n.defaultLocale = "en_US.UTF-8";
   i18n.extraLocaleSettings = {

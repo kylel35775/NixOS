@@ -12,6 +12,7 @@
   programs.waybar = {
     enable = true;
     package = pkgs.waybar;
+
     settings = [
       {
         "layer" = "top";
@@ -21,6 +22,7 @@
 
         "modules-left" = [
           "custom/startmenu"
+          "idle_inhibitor"
         ];
         "modules-center" = [
           "hyprland/workspaces"
@@ -37,6 +39,16 @@
           "format" = "";
           "on-click" = "sleep 0.1 && rofi-launcher";
           "tooltip" = false;
+        };
+        "idle_inhibitor" = {
+          "format" = "{icon}";
+          "format-icons" = {
+            "activated" = "︎⏻";
+            "deactivated" = "︎⏾";
+          };
+          "tooltip-format-activated" = "Idle Inhibited";
+          "tooltip-format-deactivated" = "Idle Permitted";
+          "timeout" = 240; # (In minutes) Deactivate inhibitor after 4 hours
         };
 
         "hyprland/workspaces" = {
@@ -79,6 +91,13 @@
           };
         };
         "battery" = {
+          "on-click" = "";
+          "interval" = 15;
+          "states" = {
+            "warning" = 25;
+            "critical" = 10;
+          };
+
           "format" = "{icon}";
           "format-charging" = "󰂄";
           "format-icons" = [
@@ -94,10 +113,6 @@
             "󰁹"
           ];
           "format-plugged" = "󱘖 ";
-          "states" = {
-            "critical" = 15;
-            "warning" = 30;
-          };
           "tooltip-format" = "Battery: {capacity}%";
         };
         "clock" = {
@@ -126,6 +141,7 @@
         };
       }
     ];
+
     style = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/.config/waybar/style.css";
     # concatStrings [
     #   ''

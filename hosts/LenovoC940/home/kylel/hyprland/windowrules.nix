@@ -1,4 +1,4 @@
-_: let
+let
   inherit (import ../user-variables.nix) extraMonitorSettings;
 in {
   wayland.windowManager.hyprland = {
