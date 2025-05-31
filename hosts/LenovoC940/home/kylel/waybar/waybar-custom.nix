@@ -22,7 +22,7 @@
 
         "modules-left" = [
           "custom/startmenu"
-          "idle_inhibitor"
+          "power-profiles-daemon"
         ];
         "modules-center" = [
           "hyprland/workspaces"
@@ -40,16 +40,25 @@
           "on-click" = "sleep 0.1 && rofi-launcher";
           "tooltip" = false;
         };
-        "idle_inhibitor" = {
+        "power-profiles-daemon" = {
           "format" = "{icon}";
           "format-icons" = {
-            "activated" = "︎⏻";
-            "deactivated" = "︎⏾";
+            "performance" = "";
+            "balanced" = "";
+            "power-saver" = "";
           };
-          "tooltip-format-activated" = "Idle Inhibited";
-          "tooltip-format-deactivated" = "Idle Permitted";
-          "timeout" = 240; # (In minutes) Deactivate inhibitor after 4 hours
+          "tooltip-format" = "Profile: {profile}\nDriver: {driver}";
         };
+        # "idle_inhibitor" = {
+        #   "format" = "{icon}";
+        #   "format-icons" = {
+        #     "activated" = "︎⏻";
+        #     "deactivated" = "︎⏾";
+        #   };
+        #   "tooltip-format-activated" = "Idle Inhibited";
+        #   "tooltip-format-deactivated" = "Idle Permitted";
+        #   "timeout" = 240; # (In minutes) Deactivate inhibitor after 4 hours
+        # };
 
         "hyprland/workspaces" = {
           "format" = "{name}";

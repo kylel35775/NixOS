@@ -63,7 +63,7 @@ in {
       home = {
         username = "${username}";
         homeDirectory = "/home/${username}";
-        stateVersion = "23.11";
+        stateVersion = "23.11"; # DO NOT CHANGE !!!
       };
       xdg.userDirs = {
         enable = true;

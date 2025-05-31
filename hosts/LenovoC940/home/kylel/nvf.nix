@@ -11,7 +11,10 @@
       vimAlias = true;
       viAlias = true;
       withNodeJs = true;
-      useSystemClipboard = true;
+
+      clipboard = {
+        enable = true;
+      };
 
       options = {
         tabstop = 2;
@@ -83,6 +86,7 @@
       };
 
       lsp = {
+        enable = true;
         formatOnSave = true;
         lspkind.enable = false;
         lightbulb.enable = true;
@@ -90,12 +94,10 @@
         trouble.enable = true;
         lspSignature.enable = true;
         otter-nvim.enable = false;
-        lsplines.enable = false;
         nvim-docs-view.enable = false;
       };
 
       languages = {
-        enableLSP = true;
         enableFormat = true;
         enableTreesitter = true;
         enableExtraDiagnostics = true;
