@@ -8,5 +8,6 @@
     ./packages.nix
     ./pyprland.nix
     ./services.nix
+    ./swayosd.nix
   ];
 }
