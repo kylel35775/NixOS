@@ -27,6 +27,7 @@
     discord # Electron Based Social Messager
     docker-compose # Allows Controlling Docker From A Single File
     duf # Utility For Viewing Disk Usage In Terminal
+    exfat # Free exFAT File System Implementation
     eza # Beautiful ls Replacement
     ffmpeg # Terminal Video / Audio Editing
     file-roller # Archive Manager

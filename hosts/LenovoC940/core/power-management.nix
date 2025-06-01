@@ -1,7 +1,6 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
     powerjoular # Power Monitoring for CPU/GPU
-    powermode-indicator # System Tray Indicator for Changing Power Mode
     powertop # Power Monitor
   ];
 

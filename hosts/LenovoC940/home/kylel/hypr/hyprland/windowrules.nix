@@ -1,5 +1,5 @@
 let
-  inherit (import ../user-variables.nix) extraMonitorSettings;
+  inherit (import ../../user-variables.nix) extraMonitorSettings;
 in {
   wayland.windowManager.hyprland = {
     settings = {
@@ -93,12 +93,11 @@ in {
         "blur, swaync-control-center"
         "ignorezero, swaync-control-center"
         "ignorealpha, 0.5, swaync-control-center"
+        "animation slide right, swaync-control-center"
 
         "blur, swaync-notification-window"
         "ignorezero, swaync-notification-window"
         "ignorealpha, 0.5, swaync-notification-window"
-
-        "animation slide top, rofi"
       ];
     };
 

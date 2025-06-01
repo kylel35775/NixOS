@@ -1,5 +1,5 @@
 let
-  inherit (import ../user-variables.nix) browser terminal;
+  inherit (import ../../user-variables.nix) browser terminal;
 in {
   wayland.windowManager.hyprland.settings = {
     bind = [

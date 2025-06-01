@@ -3,31 +3,8 @@
   pkgs,
   ...
 }: let
-  inherit (import ../../../system-variables.nix) keyboardLayout;
+  inherit (import ../../../../system-variables.nix) keyboardLayout;
 in {
-  home.packages = with pkgs; [
-    swww # Wallpaper Daemon
-
-    grim # CLI Screenshot Utility; Works well with Slurp
-    slurp # Wayland Region Selector; Works well with Grim
-    swappy # Wayland Screenshot Editor
-    hyprpicker # Wayland Color Picker
-
-    wl-clipboard # CLI Copy/Paste Utility;
-    clipse # TUI Clipboard Utility; Works with wl-clipboard
-
-    ydotool # CLI Automation Tool
-
-    hyprpolkitagent # Polkit authentication agent written in QT/QML
-    hyprland-qtutils # Needed for banners and ANR messages
-  ];
-
-  # GTK OSD Window Dropdown for Keyboard Shortcuts/Settings changes
-  services.swayosd = {
-    enable = true;
-    package = pkgs.swayosd;
-  };
-
   systemd.user.targets.hyprland-session.Unit.Wants = [
     "xdg-desktop-autostart.target"
   ];
@@ -35,7 +12,7 @@ in {
   # Place Files Inside Home Directory
   home.file = {
     "Pictures/Wallpapers" = {
-      source = ../../wallpapers;
+      source = ../../../wallpapers;
       recursive = true;
     };
 
@@ -58,18 +35,6 @@ in {
     };
 
     settings = {
-      exec-once = [
-        "dbus-update-activation-environment --all --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
-        "systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
-        "systemctl --user start hyprpolkitagent"
-        "killall -q swww;sleep .5 && swww init"
-        "killall -q waybar;sleep .5 && waybar"
-        "killall -q swaync;sleep .5 && swaync"
-        "nm-applet --indicator"
-        "pypr &"
-        "clipse -listen"
-      ];
-
       input = {
         kb_layout = "${keyboardLayout}";
         kb_options = [
@@ -167,25 +132,6 @@ in {
         new_on_top = 1;
         mfact = 0.5;
       };
-
-      env = [
-        "NIXOS_OZONE_WL, 1"
-        "NIXPKGS_ALLOW_UNFREE, 1"
-        "XDG_CURRENT_DESKTOP, Hyprland"
-        "XDG_SESSION_TYPE, wayland"
-        "XDG_SESSION_DESKTOP, Hyprland"
-        "GDK_BACKEND, wayland, x11"
-        "CLUTTER_BACKEND, wayland"
-        "QT_QPA_PLATFORM=wayland;xcb"
-        "QT_WAYLAND_DISABLE_WINDOWDECORATION, 1"
-        "QT_AUTO_SCREEN_SCALE_FACTOR, 1"
-        "SDL_VIDEODRIVER, x11"
-        "MOZ_ENABLE_WAYLAND, 1"
-        "AQ_DRM_DEVICES,/dev/dri/card0:/dev/dri/card1"
-        "GDK_SCALE,1"
-        "QT_SCALE_FACTOR,1"
-        "EDITOR,nvim"
-      ];
     };
   };
 }

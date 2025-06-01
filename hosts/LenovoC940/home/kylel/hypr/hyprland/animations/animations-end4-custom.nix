@@ -33,8 +33,8 @@
         "windowsOut, 1, 3, md3_accel, popin 60%"
 
         # Layers
-        "layersIn, 1, 3, menu_decel, slide right"
-        "layersOut, 1, 1.6, menu_accel, slide right"
+        "layersIn, 1, 3, menu_decel"
+        "layersOut, 1, 1.6, menu_accel"
 
         "fade, 1, 3, md3_decel"
         # FadeLayers

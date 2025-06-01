@@ -15,7 +15,7 @@
     ./git.nix
     ./gtk.nix
     ./htop.nix
-    ./hyprland
+    ./hypr
     ./kitty.nix
     ./nvf.nix
     ./rofi
