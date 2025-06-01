@@ -34,6 +34,7 @@ in {
         "tag +settings, class:(nwg-displays)"
         "tag +settings, class:(clipse)"
         "tag +settings, class:(wallrizz)"
+        "tag +settings, class:(flameshot)"
 
         "move 72% 7%,title:^(Picture-in-Picture)$"
 

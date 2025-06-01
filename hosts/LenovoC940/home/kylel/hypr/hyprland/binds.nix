@@ -6,8 +6,8 @@ in {
       "$modifier,Return,exec,${terminal}"
       "$modifier,K,exec,list-keybinds"
       "$modifier SHIFT,Return,exec,rofi-launcher"
-      "$modifier SHIFT,B,exec,web-search"
       "$modifier SHIFT,N,exec,swaync-client -rs"
+      "$modifier SHIFT,S,exec,flameshot gui"
       "$modifier,B,exec,${browser}"
       "$modifier,Y,exec,kitty -e yazi"
       "$modifier,E,exec,emopicker9000"
@@ -79,7 +79,7 @@ in {
       "ALT,Tab,bringactivetotop"
 
       # Function keys
-      ", Print, exec, screenshootin"
+      ", Print, exec, flameshot screen"
       # ",XF86PowerOff"
     ];
 

@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  config,
+  ...
+}: {
   home.packages = with pkgs; [
     grim # CLI Screenshot Utility
   ];
@@ -10,6 +14,7 @@
     settings = {
       General = {
         disabledTrayIcon = true;
+        savePath = "${config.home.homeDirectory}/Pictures/Screenshots";
         showStartupLaunchMessage = false;
       };
     };
