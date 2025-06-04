@@ -14,7 +14,7 @@
 
   # Set Waybar
   # Includes alternates such as waybar-curved.nix & waybar-ddubs.nix
-  waybarChoice = "waybar-custom.nix";
+  # waybarChoice = "waybar-custom.nix";
 
   # Set Animation style
   # Available options are:

@@ -1,8 +1,4 @@
-{
-  pkgs,
-  config,
-  ...
-}: {
+{config, ...}: {
   # home.file."./.config/waybar" = {
   #   enable = true;
   #   source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/.config/";
@@ -11,7 +7,6 @@
   # Configure & Theme Waybar
   programs.waybar = {
     enable = true;
-    package = pkgs.waybar;
 
     settings = [
       {

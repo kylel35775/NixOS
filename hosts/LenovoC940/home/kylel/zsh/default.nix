@@ -6,9 +6,19 @@
 }: {
   programs.zsh = {
     enable = true;
-    package = pkgs.zsh;
     autosuggestion.enable = true;
-    syntaxHighlighting.enable = true;
+    historySubstringSearch.enable = true;
+
+    history = {
+      ignoreDups = true;
+      save = 10000;
+      size = 10000;
+    };
+
+    syntaxHighlighting = {
+      enable = true;
+      highlighters = ["main" "brackets" "pattern" "regexp" "root" "line"];
+    };
 
     oh-my-zsh = {
       enable = true;

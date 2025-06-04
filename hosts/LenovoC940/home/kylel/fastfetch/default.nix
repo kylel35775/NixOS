@@ -12,7 +12,7 @@
       };
 
       logo = {
-        source = ./nix-snowflake-colours.svg;
+        source = ./nix-snowflake-colours.png;
         type = "kitty-direct";
         height = 10;
         width = 20;

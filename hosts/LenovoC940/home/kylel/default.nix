@@ -1,8 +1,6 @@
 {pkgs, ...}: let
   username = builtins.baseNameOf (builtins.toString ./.);
-  inherit (import ./user-variables.nix) waybarChoice;
   imports = [
-    ./amfora.nix
     ./bash.nix
     ./bat.nix
     ./beets.nix
@@ -23,12 +21,11 @@
     ./scripts
     ./starship.nix
     ./stylix.nix
-    ./swappy.nix
     ./swaync.nix
     ./termusic.nix
     ./virtmanager.nix
     ./wallrizz
-    ./waybar/${waybarChoice}
+    ./waybar.nix
     ./wlogout
     ./yazi
     ./xdg.nix

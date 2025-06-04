@@ -17,7 +17,6 @@
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
-    amfora # Fancy Terminal Browser For Gemini Protocol
     appimage-run # Needed For AppImage Support
     bc # GNU Software Calculator
     beets # CLI Music Tagger and Library Organizer

@@ -6,6 +6,7 @@
   programs.yazi = {
     enable = true;
     enableZshIntegration = true;
+    enableBashIntegration = true;
 
     initLua = ./init.lua;
     settings = builtins.fromTOML (builtins.readFile ./yazi.toml);
