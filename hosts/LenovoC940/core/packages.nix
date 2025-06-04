@@ -67,7 +67,6 @@
     vivaldi # Chromium Based Browser with Ad/Tracker Blocker
     wev # Wayland Event Viewer
     wget # Tool For Fetching Files With Links
-    yazi # TUI File Manager
     yt-dlp # Tool For Downloading Internet Media from YouTube, SoundCloud, etc.
     yubioath-flutter # Yubico Authenticator
   ];

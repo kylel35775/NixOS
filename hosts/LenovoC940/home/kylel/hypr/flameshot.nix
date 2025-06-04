@@ -10,6 +10,7 @@
   # Feature Rich Screenshot Daemon
   services.flameshot = {
     enable = true;
+    package = pkgs.flameshot;
 
     settings = {
       General = {
