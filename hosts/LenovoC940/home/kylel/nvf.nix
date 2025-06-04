@@ -11,9 +11,18 @@
       vimAlias = true;
       viAlias = true;
       withNodeJs = true;
+      lineNumberMode = "number";
+      preventJunkFiles = true;
+      enableLuaLoader = true;
 
       clipboard = {
         enable = true;
+        registers = "unnamedplus";
+
+        providers = {
+          wl-copy.enable = true;
+          xsel.enable = true;
+        };
       };
 
       options = {
@@ -83,13 +92,17 @@
 
       spellcheck = {
         enable = true;
+        languages = ["en"];
+
+        programmingWordlist.enable = true;
       };
 
       lsp = {
         enable = true;
         formatOnSave = true;
+
         lspkind.enable = false;
-        lightbulb.enable = true;
+        lightbulb.enable = false;
         lspsaga.enable = false;
         trouble.enable = true;
         lspSignature.enable = true;
@@ -109,6 +122,12 @@
         markdown.enable = true;
         ts.enable = true;
         html.enable = true;
+        lua.enable = true;
+        css.enable = true;
+        rust = {
+          enable = true;
+          crates.enable = true;
+        };
       };
 
       visuals = {
@@ -116,28 +135,20 @@
         nvim-cursorline.enable = true;
         cinnamon-nvim.enable = true;
         fidget-nvim.enable = true;
-
         highlight-undo.enable = true;
         indent-blankline.enable = true;
       };
 
-      statusline = {
-        lualine = {
-          enable = true;
-          theme = "base16";
-        };
+      statusline.lualine = {
+        enable = true;
+        theme = "base16";
       };
 
       autopairs.nvim-autopairs.enable = true;
-
       autocomplete.nvim-cmp.enable = true;
       snippets.luasnip.enable = true;
-
-      tabline = {
-        nvimBufferline.enable = true;
-      };
-
-      treesitter.context.enable = true;
+      tabline.nvimBufferline.enable = true;
+      treesitter.context.enable = false;
 
       binds = {
         whichKey.enable = true;
@@ -152,7 +163,6 @@
 
       projects.project-nvim.enable = true;
       dashboard.dashboard-nvim.enable = true;
-
       filetree.neo-tree.enable = true;
 
       notify = {
@@ -161,19 +171,18 @@
       };
 
       utility = {
+        preview.markdownPreview.enable = true;
         ccc.enable = false;
         vim-wakatime.enable = false;
         icon-picker.enable = true;
         surround.enable = true;
         diffview-nvim.enable = true;
+        images.image-nvim.enable = false;
+
         motion = {
           hop.enable = true;
           leap.enable = true;
           precognition.enable = false;
-        };
-
-        images = {
-          image-nvim.enable = false;
         };
       };
 
@@ -182,23 +191,21 @@
         noice.enable = true;
         colorizer.enable = true;
         illuminate.enable = true;
+        fastaction.enable = true;
+
         breadcrumbs = {
           enable = false;
           navbuddy.enable = false;
         };
+
         smartcolumn = {
           enable = false;
         };
-        fastaction.enable = true;
       };
 
-      session = {
-        nvim-session-manager.enable = false;
-      };
+      session.nvim-session-manager.enable = false;
 
-      comments = {
-        comment-nvim.enable = true;
-      };
+      comments.comment-nvim.enable = true;
     };
   };
 }
