@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  config,
+  ...
+}: {
   xdg = {
     enable = true;
     mime.enable = true;
@@ -18,10 +22,10 @@
       createDirectories = true;
 
       extraConfig = {
-        XDG_MUSIC_LIBRARY_DIR = "/home/${username}/Music/Library";
-        XDG_MUSIC_DOWNLOADS_DIR = "/home/${username}/Music/Downloads";
-        XDG_SCREENSHOTS_DIR = "/home/${username}/Pictures/Screenshots";
-        XDG_WALLPAPERS_DIR = "/home/${username}/Pictures/Wallpapers";
+        XDG_MUSIC_LIBRARY_DIR = "${config.home.homeDirectory}/Music/Library";
+        XDG_MUSIC_DOWNLOADS_DIR = "${config.home.homeDirectory}/Music/Downloads";
+        XDG_SCREENSHOTS_DIR = "${config.home.homeDirectory}/Pictures/Screenshots";
+        XDG_WALLPAPERS_DIR = "${config.home.homeDirectory}/Pictures/Wallpapers";
       };
     };
   };
