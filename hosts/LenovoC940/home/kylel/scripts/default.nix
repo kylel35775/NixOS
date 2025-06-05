@@ -5,6 +5,7 @@
     (import ./hm-find.nix {inherit pkgs;})
     (import ./keybinds.nix {inherit pkgs;})
     (import ./nvidia-offload.nix {inherit pkgs;})
+    (import ./nvim-launcher.nix {inherit pkgs;})
     (import ./playerctlock.nix {inherit pkgs;})
     (import ./rofi-launcher.nix {inherit pkgs;})
     (import ./task-waybar.nix {inherit pkgs;})
