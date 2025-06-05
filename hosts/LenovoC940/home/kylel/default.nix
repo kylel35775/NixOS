@@ -53,25 +53,13 @@ in {
     ignoreShellProgramCheck = true;
   };
 
-  home-manager = {
-    users.${username} = {
-      inherit imports;
+  home-manager.users.${username} = {
+    inherit imports;
 
-      home = {
-        username = "${username}";
-        homeDirectory = "/home/${username}";
-        stateVersion = "23.11"; # DO NOT CHANGE !!!
-      };
-      xdg.userDirs = {
-        enable = true;
-        createDirectories = true;
-        extraConfig = {
-          XDG_MUSIC_LIBRARY_DIR = "/home/${username}/Music/Library";
-          XDG_MUSIC_DOWNLOADS_DIR = "/home/${username}/Music/Downloads";
-          XDG_SCREENSHOTS_DIR = "/home/${username}/Pictures/Screenshots";
-          XDG_WALLPAPERS_DIR = "/home/${username}/Pictures/Wallpapers";
-        };
-      };
+    home = {
+      username = "${username}";
+      homeDirectory = "/home/${username}";
+      stateVersion = "23.11"; # DO NOT CHANGE !!!
     };
   };
 }
