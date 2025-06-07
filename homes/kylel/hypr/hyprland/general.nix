@@ -3,7 +3,7 @@
   pkgs,
   ...
 }: let
-  inherit (import ../../../../system-variables.nix) keyboardLayout;
+  inherit (import ../../user-variables.nix) keyboardLayout;
 in {
   systemd.user.targets.hyprland-session.Unit.Wants = [
     "xdg-desktop-autostart.target"

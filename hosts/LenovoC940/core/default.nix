@@ -5,7 +5,6 @@
     ./fonts.nix
     ./greetd.nix
     ./hardware.nix
-    ./home-manager.nix
     ./network.nix
     ./nfs.nix
     ./nh.nix
@@ -20,6 +19,7 @@
     ./syncthing.nix
     ./system.nix
     ./thunar.nix
+    ./user.nix
     ./virtualisation.nix
     ./xserver.nix
   ];

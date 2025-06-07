@@ -3,13 +3,23 @@
   pkgs,
   ...
 }: let
-  inherit (import ../system-variables.nix) stylixImage;
+  inherit (import ./user-variables.nix) stylixImage;
 in {
-  imports = [inputs.stylix.nixosModules.stylix];
+  imports = [inputs.stylix.homeModules.stylix];
   stylix = {
+    targets = {
+      waybar.enable = false;
+      swaync.enable = false;
+      rofi.enable = false;
+      hyprland.enable = false;
+      hyprlock.enable = false;
+      ghostty.enable = false;
+      qt.enable = true;
+    };
+
     enable = true;
 
-    image = ../../../homes/wallpapers/${stylixImage};
+    image = ../wallpapers/${stylixImage};
     # Manual alternative to 'image' option:
     # base16Scheme = {
     #   base00 = "282936";

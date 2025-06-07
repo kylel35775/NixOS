@@ -8,6 +8,8 @@
     monitor=,preferred,auto,1.25
   '';
 
+  keyboardLayout = "us";
+
   # Program Options
   browser = "vivaldi"; # Set Default Browser (google-chrome-stable for google-chrome)
   terminal = "kitty"; # Set Default System Terminal
@@ -22,4 +24,6 @@
   # animations-end4.nix (end-4 project)
   # animations-dynamic.nix (ml4w project)
   animChoice = "animations-end4-custom.nix";
+
+  stylixImage = "nix-wallpaper-stripes-logo.png";
 }
