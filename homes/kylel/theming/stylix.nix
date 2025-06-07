@@ -3,7 +3,7 @@
   pkgs,
   ...
 }: let
-  inherit (import ./user-variables.nix) stylixImage;
+  inherit (import ../user-variables.nix) stylixImage;
 in {
   imports = [inputs.stylix.homeModules.stylix];
   stylix = {
@@ -19,7 +19,7 @@ in {
 
     enable = true;
 
-    image = ../wallpapers/${stylixImage};
+    image = ../../wallpapers/${stylixImage};
     # Manual alternative to 'image' option:
     # base16Scheme = {
     #   base00 = "282936";
