@@ -24,8 +24,8 @@
     ...
   } @ inputs: let
     system = "x86_64-linux";
-    profile = "nvidia-laptop";
-    host = "LenovoC940";
+    profile = "nvidia";
+    host = "NixStation";
   in {
     # NixOS configuration entrypoint
     # Available through 'nixos-rebuild --flake .#your-hostname' OR 'nh os build --hostname your-hostname'
@@ -88,6 +88,12 @@
         extraSpecialArgs = {inherit inputs profile host;};
 
         modules = [./homes/kylel];
+      };
+      "kylel@NixStation" = home-manager.lib.homeManagerConfiguration {
+      	inherit pkgs;
+	extraSpecialArgs = {inherit inputs profile host;};
+
+	modules = [./homes/kylel];
       };
     };
   };
