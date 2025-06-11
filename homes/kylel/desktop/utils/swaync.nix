@@ -90,7 +90,7 @@
       };
     };
 
-    style = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/.config/swaync/style.css";
+    style = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/Documents/dotfiles/config/swaync/style.css";
     # ''
     #   /* ==================================================================
     #      SwayNC Refined CSS for Cohesive Visuals - github: @iyiolacak
