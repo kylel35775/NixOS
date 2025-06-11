@@ -15,6 +15,7 @@ in {
       hyprlock.enable = false;
       ghostty.enable = false;
       qt.enable = true;
+      vesktop.enable = false;
     };
 
     enable = true;
