@@ -9,6 +9,7 @@
     tumbler.enable = true; # Image/video preview
     gnome.gnome-keyring.enable = true;
     pcscd.enable = true; # Smart Card Daemon
+    ddccontrol.enable = true; # Controlling Displays
 
     smartd = {
       enable =
