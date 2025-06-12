@@ -47,7 +47,7 @@
     homeConfigurations = let
       pkgs = nixpkgs.legacyPackages.${system};
     in {
-      "kylel@NixStation" = home-manager.lib.homeManagerConfiguration {
+      "kylel@${host}" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
         extraSpecialArgs = {inherit inputs profile host;};
 
