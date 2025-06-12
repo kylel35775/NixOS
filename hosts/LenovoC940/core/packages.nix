@@ -23,7 +23,6 @@
     binsider # TUI Binary Analyzer
     brave # Brave Browser
     brightnessctl # For Screen Brightness Control
-    discord # Electron Based Social Messager
     docker-compose # Allows Controlling Docker From A Single File
     duf # Utility For Viewing Disk Usage In Terminal
     exfat # Free exFAT File System Implementation
