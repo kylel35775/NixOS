@@ -90,10 +90,10 @@
         modules = [./homes/kylel];
       };
       "kylel@NixStation" = home-manager.lib.homeManagerConfiguration {
-      	inherit pkgs;
-	extraSpecialArgs = {inherit inputs profile host;};
+        inherit pkgs;
+        extraSpecialArgs = {inherit inputs profile host;};
 
-	modules = [./homes/kylel];
+        modules = [./homes/kylel];
       };
     };
   };
