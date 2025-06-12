@@ -11,7 +11,7 @@ in {
       "$modifier,B,exec,${browser}"
       "$modifier,Y,exec,kitty -e yazi"
       "$modifier,E,exec,emopicker9000"
-      "$modifier,D,exec,discord"
+      "$modifier,D,exec,vesktop"
       "$modifier,O,exec,obs"
       "$modifier,C,exec,hyprpicker -a"
       "$modifier,T,exec,pypr toggle term"
