@@ -24,55 +24,19 @@
     ...
   } @ inputs: let
     system = "x86_64-linux";
-    profile = "nvidia";
-    host = "NixStation";
+    profile = "nvidia-laptop";
+    host = "LenovoC940";
   in {
     # NixOS configuration entrypoint
     # Available through 'nixos-rebuild --flake .#your-hostname' OR 'nh os build --hostname your-hostname'
     nixosConfigurations = {
-      amd = nixpkgs.lib.nixosSystem {
-        inherit system;
-        specialArgs = {inherit inputs profile host;};
-
-        modules = [
-          ./profiles/amd
-          ./hosts/${host}
-        ];
-      };
-      nvidia = nixpkgs.lib.nixosSystem {
-        inherit system;
-        specialArgs = {inherit inputs profile host;};
-
-        modules = [
-          ./profiles/nvidia
-          ./hosts/${host}
-        ];
-      };
       nvidia-laptop = nixpkgs.lib.nixosSystem {
         inherit system;
         specialArgs = {inherit inputs profile host;};
 
         modules = [
           ./profiles/nvidia-laptop
-          ./hosts/${host}
-        ];
-      };
-      intel = nixpkgs.lib.nixosSystem {
-        inherit system;
-        specialArgs = {inherit inputs profile host;};
-
-        modules = [
-          ./profiles/intel
-          ./hosts/${host}
-        ];
-      };
-      vm = nixpkgs.lib.nixosSystem {
-        inherit system;
-        specialArgs = {inherit inputs profile host;};
-
-        modules = [
-          ./profiles/vm
-          ./hosts/${host}
+          ./host/${host}
         ];
       };
     };
@@ -84,12 +48,6 @@
       pkgs = nixpkgs.legacyPackages.${system};
     in {
       "kylel@LenovoC940" = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
-        extraSpecialArgs = {inherit inputs profile host;};
-
-        modules = [./homes/kylel];
-      };
-      "kylel@NixStation" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
         extraSpecialArgs = {inherit inputs profile host;};
 
