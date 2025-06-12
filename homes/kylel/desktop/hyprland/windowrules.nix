@@ -34,7 +34,6 @@ in {
         "tag +settings, class:(nwg-displays)"
         "tag +settings, class:(clipse)"
         "tag +settings, class:(wallrizz)"
-        "tag +settings, class:(flameshot)"
 
         "move 72% 7%,title:^(Picture-in-Picture)$"
 
@@ -83,6 +82,13 @@ in {
         "noblur, tag:games*"
 
         "fullscreen, tag:games*"
+
+        # Flameshot screen capture compatability rules
+        "noanim, class:^(flameshot)$"
+        "float, class:^(flameshot)$"
+        "move 0 0, class:^(flameshot)$"
+        "pin, class:^(flameshot)$"
+        "monitor 1, class:^(flameshot)$"
       ];
 
       layerrule = [

@@ -76,6 +76,7 @@ in {
       };
 
       misc = {
+        middle_click_paste = false;
         layers_hog_keyboard_focus = true;
         initial_workspace_tracking = 0;
         mouse_move_enables_dpms = true;
