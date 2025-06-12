@@ -68,9 +68,8 @@ in {
 
         "opacity 1.0 1.0, tag:browser*"
         "opacity 0.9 0.8, tag:projects*"
-        "opacity 0.94 0.86, tag:im*"
         "opacity 0.9 0.8, tag:file-manager*"
-        "opacity 0.8 0.7, tag:terminal*"
+        "opacity 0.9 0.8, tag:terminal*"
         "opacity 0.8 0.7, tag:settings*"
         "opacity 0.8 0.7, class:^(gedit|org.gnome.TextEditor|mousepad)$"
         "opacity 0.9 0.8, class:^(seahorse)$ # gnome-keyring gui"
