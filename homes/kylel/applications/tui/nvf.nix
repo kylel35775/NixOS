@@ -1,6 +1,7 @@
 {
   inputs,
   config,
+  pkgs,
   ...
 }: {
   imports = [inputs.nvf.homeManagerModules.default];
@@ -14,6 +15,41 @@
       lineNumberMode = "number";
       preventJunkFiles = true;
       enableLuaLoader = true;
+
+      telescope.enable = true;
+      autopairs.nvim-autopairs.enable = true;
+      autocomplete.nvim-cmp.enable = true;
+      snippets.luasnip.enable = true;
+      tabline.nvimBufferline.enable = true;
+      treesitter.context.enable = false;
+      projects.project-nvim.enable = true;
+      dashboard.dashboard-nvim.enable = true;
+      session.nvim-session-manager.enable = false;
+      comments.comment-nvim.enable = true;
+
+      lazy.plugins = {
+        "edgy.nvim" = {
+          package = pkgs.vimPlugins.edgy-nvim;
+          event = "VeryLazy";
+          cmd = ["EdgyOpen"];
+
+          setupOpts = {
+            laststatus = 3;
+            splitkeep = "screen";
+          };
+        };
+      };
+
+      filetree.neo-tree = {
+        enable = true;
+
+        setupOpts = {
+          enable_cursor_hijack = true;
+          enable_git_status = true;
+          git_status_async = true;
+          open_files_in_last_window = true;
+        };
+      };
 
       clipboard = {
         enable = true;
@@ -88,8 +124,6 @@
         }
       ];
 
-      telescope.enable = true;
-
       spellcheck = {
         enable = true;
         languages = ["en"];
@@ -144,12 +178,6 @@
         theme = "base16";
       };
 
-      autopairs.nvim-autopairs.enable = true;
-      autocomplete.nvim-cmp.enable = true;
-      snippets.luasnip.enable = true;
-      tabline.nvimBufferline.enable = true;
-      treesitter.context.enable = false;
-
       binds = {
         whichKey.enable = true;
         cheatsheet.enable = true;
@@ -160,10 +188,6 @@
         gitsigns.enable = true;
         gitsigns.codeActions.enable = false; # throws an annoying debug message
       };
-
-      projects.project-nvim.enable = true;
-      dashboard.dashboard-nvim.enable = true;
-      filetree.neo-tree.enable = true;
 
       notify = {
         nvim-notify.enable = true;
@@ -202,10 +226,6 @@
           enable = false;
         };
       };
-
-      session.nvim-session-manager.enable = false;
-
-      comments.comment-nvim.enable = true;
     };
   };
 }
