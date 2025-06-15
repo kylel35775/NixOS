@@ -13,8 +13,12 @@
     "QT_WAYLAND_DISABLE_WINDOWDECORATION, 1"
     "QT_AUTO_SCREEN_SCALE_FACTOR, 1"
     "QT_SCALE_FACTOR, 1.25"
-    "SDL_VIDEODRIVER, x11"
     "MOZ_ENABLE_WAYLAND, 1"
+
+    # Mostly needed for hybrid laptops, can result in inop cfg. Comment if needed
     "AQ_DRM_DEVICES, /dev/dri/card0:/dev/dri/card1"
+
+    # EAC doesn't like this one, keep commented unless needed.
+    # "SDL_VIDEODRIVER, x11"
   ];
 }
