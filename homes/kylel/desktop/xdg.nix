@@ -9,6 +9,15 @@
 
     mimeApps = {
       enable = true;
+
+      defaultApplications = {
+        "default-web-browser" = ["vivaldi.desktop" "brave.desktop"];
+        "text/html" = ["vivaldi.desktop" "brave.desktop"];
+        "x-scheme-handler/http" = ["vivaldi.desktop" "brave.desktop"];
+        "x-scheme-handler/https" = ["vivaldi.desktop" "brave.desktop"];
+        "x-scheme-handler/about" = ["vivaldi.desktop" "brave.desktop"];
+        "x-scheme-handler/unknown" = ["vivaldi.desktop" "brave.desktop"];
+      };
     };
 
     portal = {

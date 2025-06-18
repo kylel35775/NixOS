@@ -1,6 +1,7 @@
 {pkgs, ...}: {
   home.packages = [
     (import ./emopicker9000.nix {inherit pkgs;})
+    (import ./flameshot-gui.nix {inherit pkgs;})
     (import ./infonlock.nix {inherit pkgs;})
     (import ./hm-find.nix {inherit pkgs;})
     (import ./keybinds.nix {inherit pkgs;})

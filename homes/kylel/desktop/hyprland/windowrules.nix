@@ -84,11 +84,13 @@ in {
         "fullscreen, tag:games*"
 
         # Flameshot screen capture compatability rules
-        "noanim, class:^(flameshot)$"
-        "float, class:^(flameshot)$"
-        "move 0 0, class:^(flameshot)$"
-        "pin, class:^(flameshot)$"
-        "monitor 1, class:^(flameshot)$"
+        "noanim, class:flameshot, title:flameshot"
+        "stayfocused, class:flameshot, title:flameshot"
+        "norounding, class:flameshot, title:flameshot"
+        "noborder, class:flameshot, title:flameshot"
+        "float, class:flameshot"
+        "pin, class:flameshot, title:flameshot"
+        "move 0 0, class:flameshot, title:flameshot"
       ];
 
       layerrule = [

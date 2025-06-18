@@ -17,6 +17,7 @@
         disabledTrayIcon = true;
         savePath = "${config.home.homeDirectory}/Pictures/Screenshots";
         showStartupLaunchMessage = false;
+        showDesktopNotification = false;
       };
     };
   };
