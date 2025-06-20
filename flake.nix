@@ -14,12 +14,16 @@
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
 
-    nvf.url = "github:notashelf/nvf";
+    nvf = {
+      url = "github:notashelf/nvf/";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
+    };
     stylix.url = "github:danth/stylix/release-25.05";
   };
 
   outputs = {
     nixpkgs,
+    nixpkgs-unstable,
     home-manager,
     ...
   } @ inputs: let
@@ -46,10 +50,11 @@
     # user@host need not be specified once user+host is established, as home-manager will select the current user@host
     homeConfigurations = let
       pkgs = nixpkgs.legacyPackages.${system};
+      pkgs-unstable = nixpkgs-unstable.legacyPackages.${system};
     in {
       "kylel@${host}" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
-        extraSpecialArgs = {inherit inputs profile host;};
+        extraSpecialArgs = {inherit inputs pkgs-unstable profile host;};
 
         modules = [./homes/kylel];
       };

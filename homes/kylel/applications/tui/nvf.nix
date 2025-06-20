@@ -154,10 +154,16 @@
         zig.enable = true;
         python.enable = true;
         markdown.enable = true;
-        ts.enable = true;
+        ts = {
+          enable = true;
+          format.type = "prettierd";
+        };
         html.enable = true;
         lua.enable = true;
-        css.enable = true;
+        css = {
+          enable = true;
+          format.type = "prettierd";
+        };
         rust = {
           enable = true;
           crates.enable = true;

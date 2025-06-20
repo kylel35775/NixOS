@@ -63,6 +63,7 @@
     usbutils # Good Tools For USB Devices
     v4l-utils # Used For Things Like OBS Virtual Camera
     vivaldi # Chromium Based Browser with Ad/Tracker Blocker
+    vlc # Cross-Platform Media Player and Streaming Server
     wev # Wayland Event Viewer
     wget # Tool For Fetching Files With Links
     yt-dlp # Tool For Downloading Internet Media from YouTube, SoundCloud, etc.

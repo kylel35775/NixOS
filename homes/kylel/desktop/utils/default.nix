@@ -6,6 +6,7 @@
     ./hyprlock.nix
     ./hyprpicker.nix
     ./hyprpolkitagent.nix
+    ./hyprshell.nix
     ./pyprland.nix
     ./swaync.nix
     ./swayosd.nix
