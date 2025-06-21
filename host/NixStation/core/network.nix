@@ -12,7 +12,7 @@
     timeServers = options.networking.timeServers.default ++ ["pool.ntp.org"];
 
     firewall = {
-      enable = false;
+      enable = true;
 
       allowedTCPPorts = [
         22
@@ -21,10 +21,15 @@
         59010
         59011
         8080
+
+        8008 # Chromecast
+        8009 # Chromecast
       ];
       allowedUDPPorts = [
         59010
         59011
+
+        5353 # Chromecast Discovery
       ];
     };
   };
