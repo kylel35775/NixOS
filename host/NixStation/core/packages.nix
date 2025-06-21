@@ -40,6 +40,7 @@
     keepassxc # Offline Password Manager
     killall # For Killing All Instances Of Programs
     libnotify # For Notifications
+    libreoffice # Comprehensive Productivity Suite
     lm_sensors # Used For Getting Hardware Temps
     lshw # Detailed Hardware Information
     mpv # Incredible Video Player
