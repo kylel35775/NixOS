@@ -14,9 +14,12 @@
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
 
+    # nvf = {
+    #   url = "github:notashelf/nvf/";
+    #   inputs.nixpkgs.follows = "nixpkgs-unstable";
+    # };
     nvf = {
-      url = "github:notashelf/nvf/";
-      inputs.nixpkgs.follows = "nixpkgs-unstable";
+      url = "github:notashelf/nvf?ref=pull/956/merge";
     };
     stylix.url = "github:danth/stylix/release-25.05";
   };

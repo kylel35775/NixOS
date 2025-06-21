@@ -4,6 +4,7 @@ in {
   wayland.windowManager.hyprland = {
     settings = {
       windowrulev2 = [
+        # Tags
         "tag +file-manager, class:^([Tt]hunar|org.gnome.Nautilus|[Pp]cmanfm-qt)$"
         "tag +terminal, class:^(Alacritty|kitty|kitty-dropterm)$"
         "tag +browser, class:^(Brave-browser(-beta|-dev|-unstable)?)$"
@@ -37,15 +38,18 @@ in {
 
         "move 72% 7%,title:^(Picture-in-Picture)$"
 
+        # Center
         "center, class:^([Ff]erdium)$"
         "center, class:^(pavucontrol|org.pulseaudio.pavucontrol|com.saivert.pwvucontrol)$"
         "center, class:([Tt]hunar), title:negative:(.*[Tt]hunar.*)"
         "center, title:^(Authentication Required)$"
 
+        # Idle Inhibit
         "idleinhibit fullscreen, class:^(*)$"
         "idleinhibit fullscreen, title:^(*)$"
         "idleinhibit fullscreen, fullscreen:1"
 
+        # Float
         "float, tag:settings*"
         "float, class:^([Ww]aypaper)$"
         "float, class:^([Ff]erdium)$"
@@ -60,11 +64,13 @@ in {
         "float, initialTitle:(Open Files)"
         "float, initialTitle:(wants to save)"
 
+        # Sizing
         "size 70% 60%, initialTitle:(Open Files)"
         "size 70% 60%, initialTitle:(Add Folder to Workspace)"
         "size 70% 70%, tag:settings*"
         "size 60% 70%, class:^([Ff]erdium)$"
 
+        # Opacity
         "opacity 1.0 1.0, tag:browser*"
         "opacity 0.9 0.8, tag:projects*"
         "opacity 0.9 0.8, tag:file-manager*"
@@ -109,6 +115,7 @@ in {
       ];
     };
 
+    # Xorg applications must be forced to not scale, as they do not support fractional scaling
     extraConfig = "
       monitor=,preferred,auto,auto
       xwayland {

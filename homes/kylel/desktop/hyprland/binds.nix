@@ -3,7 +3,7 @@ let
 in {
   wayland.windowManager.hyprland.settings = {
     bind = [
-      # App Binds
+      # Apps
       "$modifier, Return, exec, ${terminal}"
       "$modifier, K, exec, list-keybinds"
       "$modifier SHIFT, Return, exec, rofi-launcher"
@@ -20,6 +20,7 @@ in {
       "$modifier, V, exec, kitty --class clipse --single-instance -e clipse"
       "$modifier, W, exec, kitty --class wallrizz --single-instance -o allow_remote_control=yes -e WallRizz --disable-notification --preview-mode list"
 
+      # Window
       "$modifier, Q, killactive,"
       "$modifier, P, pseudo,"
       "$modifier SHIFT, I, togglesplit,"
@@ -43,6 +44,8 @@ in {
       "$modifier ALT, 46, swapwindow,r"
       "$modifier ALT, 45, swapwindow,u"
       "$modifier ALT, 44, swapwindow,d"
+
+      # Focus
       "$modifier, left, movefocus,l"
       "$modifier, right, movefocus,r"
       "$modifier, up, movefocus,u"
@@ -51,6 +54,12 @@ in {
       "$modifier, l, movefocus,r"
       "$modifier, k, movefocus,u"
       "$modifier, j, movefocus,d"
+
+      # Cycle Focus
+      "ALT, Tab, cyclenext"
+      "ALT, Tab, bringactivetotop"
+
+      # Workspace
       "$modifier, 1, workspace,1"
       "$modifier, 2, workspace,2"
       "$modifier, 3, workspace,3"
@@ -77,8 +86,6 @@ in {
       "$modifier CONTROL, left, workspace,e-1"
       "$modifier, mouse_down, workspace, e+1"
       "$modifier, mouse_up, workspace, e-1"
-      "ALT, Tab, cyclenext"
-      "ALT, Tab, bringactivetotop"
 
       # Function keys
       ", Print, exec, flameshot screen"

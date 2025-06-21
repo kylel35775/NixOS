@@ -1,8 +1,4 @@
-{
-  config,
-  pkgs,
-  ...
-}: let
+{config, ...}: let
   inherit (import ../../user-variables.nix) keyboardLayout;
 in {
   systemd.user.targets.hyprland-session.Unit.Wants = [
@@ -22,16 +18,13 @@ in {
 
   wayland.windowManager.hyprland = {
     enable = true;
-    package = pkgs.hyprland;
+
+    xwayland.enable = true;
 
     systemd = {
       enable = true;
       enableXdgAutostart = true;
       variables = ["--all"];
-    };
-
-    xwayland = {
-      enable = true;
     };
 
     settings = {

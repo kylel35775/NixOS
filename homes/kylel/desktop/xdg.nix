@@ -11,12 +11,12 @@
       enable = true;
 
       defaultApplications = {
-        "default-web-browser" = ["vivaldi.desktop" "brave.desktop"];
-        "text/html" = ["vivaldi.desktop" "brave.desktop"];
-        "x-scheme-handler/http" = ["vivaldi.desktop" "brave.desktop"];
-        "x-scheme-handler/https" = ["vivaldi.desktop" "brave.desktop"];
-        "x-scheme-handler/about" = ["vivaldi.desktop" "brave.desktop"];
-        "x-scheme-handler/unknown" = ["vivaldi.desktop" "brave.desktop"];
+        "default-web-browser" = ["vivaldi-stable.desktop" "brave-browser.desktop"];
+        "text/html" = ["vivaldi-stable.desktop" "brave-browser.desktop"];
+        "x-scheme-handler/http" = ["vivaldi-stable.desktop" "brave-browser.desktop"];
+        "x-scheme-handler/https" = ["vivaldi-stable.desktop" "brave-browser.desktop"];
+        "x-scheme-handler/about" = ["vivaldi-stable.desktop" "brave-browser.desktop"];
+        "x-scheme-handler/unknown" = ["vivaldi-stable.desktop" "brave-browser.desktop"];
       };
     };
 
