@@ -10,6 +10,7 @@
     gnome.gnome-keyring.enable = true;
     pcscd.enable = true; # Smart Card Daemon
     ddccontrol.enable = true; # Controlling Displays
+    udev.enable = true; # Device Manager
 
     smartd = {
       enable =
