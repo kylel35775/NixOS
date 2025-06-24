@@ -36,8 +36,6 @@ in {
         "tag +settings, class:(clipse)"
         "tag +settings, class:(wallrizz)"
 
-        "move 72% 7%,title:^(Picture-in-Picture)$"
-
         # Center
         "center, class:^([Ff]erdium)$"
         "center, class:^(pavucontrol|org.pulseaudio.pavucontrol|com.saivert.pwvucontrol)$"
@@ -55,6 +53,7 @@ in {
         "float, class:^([Ff]erdium)$"
         "float, title:^(Picture-in-Picture)$"
         "float, class:^(mpv|com.github.rafostar.Clapper)$"
+        "float, title:^(Discord Popout)$"
         "float, title:^(Authentication Required)$"
         "float, class:(codium|codium-url-handler|VSCodium), title:negative:(.*codium.*|.*VSCodium.*)"
         "float, class:^(com.heroicgameslauncher.hgl)$, title:negative:(Heroic Games Launcher)"
@@ -81,6 +80,8 @@ in {
         "opacity 0.8 0.7, class:^([Rr]hythmbox)$"
         "opacity 0.95 0.75, title:^(Picture-in-Picture)$"
 
+        "move 72% 7%,title:^(Picture-in-Picture)$"
+
         "pin, title:^(Picture-in-Picture)$"
 
         "keepaspectratio, title:^(Picture-in-Picture)$"
@@ -91,9 +92,9 @@ in {
 
         # Flameshot screen capture compatability rules
         "noanim, class:flameshot, title:flameshot"
-        "stayfocused, class:flameshot, title:flameshot"
         "norounding, class:flameshot, title:flameshot"
         "noborder, class:flameshot, title:flameshot"
+        "stayfocused, class:flameshot, title:flameshot"
         "float, class:flameshot"
         "pin, class:flameshot, title:flameshot"
         "move 0 0, class:flameshot, title:flameshot"
@@ -116,13 +117,13 @@ in {
     };
 
     # Xorg applications must be forced to not scale, as they do not support fractional scaling
-    extraConfig = "
+    extraConfig = ''
       monitor=,preferred,auto,auto
       xwayland {
         force_zero_scaling = true
       }
 
       ${extraMonitorSettings}
-    ";
+    '';
   };
 }

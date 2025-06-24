@@ -1,7 +1,7 @@
 {
   inputs,
   config,
-  pkgs,
+  # pkgs,
   ...
 }: {
   imports = [inputs.nvf.homeManagerModules.default];
@@ -27,18 +27,18 @@
       session.nvim-session-manager.enable = false;
       comments.comment-nvim.enable = true;
 
-      lazy.plugins = {
-        "edgy.nvim" = {
-          package = pkgs.vimPlugins.edgy-nvim;
-          event = "VeryLazy";
-          cmd = ["EdgyOpen"];
-
-          setupOpts = {
-            laststatus = 3;
-            splitkeep = "screen";
-          };
-        };
-      };
+      # lazy.plugins = {
+      # "edgy.nvim" = {
+      #   package = pkgs.vimPlugins.edgy-nvim;
+      #   event = "VeryLazy";
+      #   cmd = ["EdgyOpen"];
+      #
+      #   setupOpts = {
+      #     laststatus = 3;
+      #     splitkeep = "screen";
+      #   };
+      # };
+      # };
 
       filetree.neo-tree = {
         enable = true;

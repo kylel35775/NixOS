@@ -22,11 +22,11 @@ in {
 
       # Window
       "$modifier, Q, killactive,"
-      "$modifier, P, pseudo,"
       "$modifier SHIFT, I, togglesplit,"
       "$modifier, F, fullscreen,"
       "$modifier SHIFT, F, togglefloating,"
       "$modifier ALT, F,workspaceopt, allfloat"
+      "$modifier SHIFT, P, pin,"
       "$modifier SHIFT, C, exit,"
       "$modifier SHIFT, left, movewindow,l"
       "$modifier SHIFT, right, movewindow,r"

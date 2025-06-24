@@ -11,7 +11,7 @@
     ./swaync.nix
     ./swayosd.nix
     ./swww.nix
-    ./waybar.nix
+    ./waybar
     ./wlogout
     ./wl-clipboard.nix
   ];
