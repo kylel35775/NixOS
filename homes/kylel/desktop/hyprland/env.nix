@@ -35,5 +35,14 @@
 
     # Mostly needed for hybrid laptops, can result in inop cfg. Comment if needed.
     "AQ_DRM_DEVICES, /dev/dri/card0:/dev/dri/card1"
+
+    # Nvidia
+    "LIBVA_DRIVER_NAME,nvidia"
+    "__GLX_VENDOR_LIBRARY_NAME,nvidia"
+    ### NIXOS_OZONE_WL already hints this, setting this just in case
+    "ELECTRON_OZONE_PLATFORM_HINT,auto"
+    ### Likely already handled by hardware.nvidia.videoAcceleration, setting just in case
+    ### VA-API may help resolve issues in Electron apps
+    "NVD_BACKEND, direct"
   ];
 }

@@ -25,10 +25,10 @@
           }
 
           # Suspend after 60 minutes
-          # {
-          #   timeout = 3600;
-          #   on-timeout = "systemctl suspend";
-          # }
+          {
+            timeout = 3600;
+            on-timeout = "systemctl suspend";
+          }
 
           # Hibernate after 60 minutes
           # {

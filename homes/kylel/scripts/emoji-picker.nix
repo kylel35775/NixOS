@@ -1,5 +1,5 @@
 {pkgs}:
-pkgs.writeShellScriptBin "emopicker9000" ''
+pkgs.writeShellScriptBin "emoji-picker" ''
   # check if rofi is already running
   if pidof rofi > /dev/null; then
     pkill rofi

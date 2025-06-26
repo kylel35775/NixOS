@@ -20,6 +20,8 @@ in {
     enable = true;
 
     xwayland.enable = true;
+    # Xorg applications must be forced to not scale, as they do not support fractional scaling
+    settings.xwayland.force_zero_scaling = true;
 
     systemd = {
       enable = true;

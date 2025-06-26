@@ -5,27 +5,26 @@ in {
     bind = [
       # Apps
       "$modifier, Return, exec, ${terminal}"
-      "$modifier, K, exec, list-keybinds"
       "$modifier SHIFT, Return, exec, rofi-launcher"
       "$modifier SHIFT, N, exec, swaync-client -rs"
       "$modifier SHIFT, S, exec, flameshot-gui"
       "$modifier, B, exec,${browser}"
       "$modifier, Y, exec, kitty -e yazi"
-      "$modifier, E, exec, emopicker9000"
+      "$modifier, E, exec, emoji-picker"
       "$modifier, D, exec, vesktop"
-      "$modifier, O, exec, obs"
       "$modifier, C, exec, hyprpicker -a"
-      "$modifier, T, exec, pypr toggle term"
       "$modifier, M, exec, pavucontrol"
       "$modifier, V, exec, kitty --class clipse --single-instance -e clipse"
       "$modifier, W, exec, kitty --class wallrizz --single-instance -o allow_remote_control=yes -e WallRizz --disable-notification --preview-mode list"
 
       # Window
       "$modifier, Q, killactive,"
+      "$modifier SHIFT, Q, forcekillactive"
       "$modifier SHIFT, I, togglesplit,"
       "$modifier, F, fullscreen,"
       "$modifier SHIFT, F, togglefloating,"
       "$modifier ALT, F,workspaceopt, allfloat"
+      "$modifier SHIFT, P, togglefloating,"
       "$modifier SHIFT, P, pin,"
       "$modifier SHIFT, C, exit,"
       "$modifier SHIFT, left, movewindow,l"
@@ -107,6 +106,8 @@ in {
 
       ", XF86MonBrightnessUp, exec, swayosd-client --brightness=raise"
       ", XF86MonBrightnessDown, exec, swayosd-client --brightness=lower"
+
+      ", caps_lock, exec, swayosd-client --caps-lock"
     ];
 
     # bind[m] - Mouse keybinds

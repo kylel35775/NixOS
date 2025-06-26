@@ -166,20 +166,6 @@
           halign = "center";
           valign = "center";
         }
-
-        # === BATTERY ===
-        {
-          # Update every minute (60000 ms)
-          text = ''
-            cmd[update:60000] echo -e "$(infonlock)"
-          '';
-          color = "rgba(255, 255, 255, 1)";
-          font_size = 14;
-          font_family = "JetBrains Mono Nerd Font Mono ExtraBold";
-          position = "-25px, 25px";
-          halign = "right";
-          valign = "bottom";
-        }
       ];
 
       # PASSWORD INPUT
