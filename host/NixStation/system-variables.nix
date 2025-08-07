@@ -11,7 +11,7 @@
   enableNFS = true;
 
   # Enable Printing Support
-  printEnable = false;
+  printEnable = true;
 
   # Set Stylix Image
   stylixImage = "nix-wallpaper-stripes-logo.png";

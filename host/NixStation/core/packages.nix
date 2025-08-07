@@ -33,10 +33,14 @@
     gitui # TUI For Git Version Control
     glxinfo # Needed for inxi diag util
     greetd.tuigreet # The Login Manager (Sometimes Referred To As Display Manager)
+    heroic # Native GOG, Epic, and Amazon Games Launcher for Linux, Windows and Mac
+    home-manager # Home Manager CLI
     htop # Simple Terminal Based System Monitor
     eog # For Image Viewing
+    inkscape # SVG Drawing
     inxi # CLI System Information Tool
     jq # CLI JSON Processor
+    kdePackages.okular # PDF Viewer/Basic Editor
     keepassxc # Offline Password Manager
     killall # For Killing All Instances Of Programs
     libnotify # For Notifications

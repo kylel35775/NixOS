@@ -5,6 +5,7 @@ in {
   # Configure & Theme Waybar
   programs.waybar = {
     enable = true;
+    systemd.enable = true;
 
     inherit settings;
     inherit style;

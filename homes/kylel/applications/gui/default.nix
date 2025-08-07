@@ -4,6 +4,7 @@
     ./kitty.nix
     ./obsidian.nix
     ./rofi
+    ./thunar.nix
     ./vesktop
     ./virtmanager.nix
   ];

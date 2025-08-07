@@ -17,7 +17,7 @@
     ./starfish.nix
     ./steam.nix
     ./stylix.nix
-    ./syncthing.nix
+    ./sync
     ./system.nix
     ./thunar.nix
     ./user.nix

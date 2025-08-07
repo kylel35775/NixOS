@@ -1,13 +1,17 @@
-let
+{pkgs, ...}: let
   inherit (import ../system-variables.nix) printEnable;
 in {
+  environment.systemPackages = with pkgs; [
+    hplip
+  ];
+
   services = {
     ipp-usb.enable = printEnable;
 
     printing = {
       enable = printEnable;
       drivers = [
-        # pkgs.hplipWithPlugin
+        pkgs.hplipWithPlugin
       ];
     };
 

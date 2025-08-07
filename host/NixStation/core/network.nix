@@ -24,12 +24,16 @@
 
         8008 # Chromecast
         8009 # Chromecast
+
+        8384 # Syncthing
       ];
       allowedUDPPorts = [
         59010
         59011
 
         5353 # Chromecast Discovery
+
+        8384 # Syncthing
       ];
     };
   };

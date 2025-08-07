@@ -7,18 +7,24 @@
 in {
   imports = [inputs.stylix.homeModules.stylix];
   stylix = {
-    targets = {
-      waybar.enable = false;
-      swaync.enable = false;
-      rofi.enable = false;
-      hyprland.enable = false;
-      hyprlock.enable = false;
-      ghostty.enable = false;
-      qt.enable = true;
-      vesktop.enable = false;
-    };
-
     enable = true;
+    autoEnable = false;
+
+    targets = {
+      # waybar.enable = false;
+      # swaync.enable = false;
+      # rofi.enable = false;
+      # hyprland.enable = false;
+      # hyprlock.enable = false;
+      # ghostty.enable = false;
+      # vesktop.enable = false;
+      # thunar.enable = false;
+      # gtk.enable = false;
+      # qt.enable = false;
+
+      nvf.enable = true;
+      kitty.enable = true;
+    };
 
     image = ../../wallpapers/${stylixImage};
     # Manual alternative to 'image' option:
