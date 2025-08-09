@@ -6,7 +6,7 @@
     ./hyprlock.nix
     ./hyprpicker.nix
     ./hyprpolkitagent.nix
-    ./hyprshell.nix
+    ./pasystray.nix
     ./swaync.nix
     ./swayosd.nix
     ./swww.nix

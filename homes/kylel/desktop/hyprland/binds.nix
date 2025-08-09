@@ -6,6 +6,7 @@ in {
       # Apps
       "$modifier, Return, exec, ${terminal}"
       "$modifier SHIFT, Return, exec, rofi-launcher"
+      "$modifier, N, exec, swaync-launcher"
       "$modifier SHIFT, N, exec, swaync-client -rs"
       "$modifier SHIFT, S, exec, flameshot-gui"
       "$modifier, B, exec,${browser}"
@@ -14,8 +15,8 @@ in {
       "$modifier, D, exec, vesktop"
       "$modifier, C, exec, hyprpicker -a"
       "$modifier, M, exec, pavucontrol"
-      "$modifier, V, exec, kitty --class clipse --single-instance -e clipse"
-      "$modifier, W, exec, kitty --class wallrizz --single-instance -o allow_remote_control=yes -e WallRizz --disable-notification --preview-mode list"
+      "$modifier, V, exec, clipse-launcher"
+      "$modifier, W, exec, wallrizz-launcher"
 
       # Window
       "$modifier, Q, killactive,"
@@ -26,7 +27,6 @@ in {
       "$modifier ALT, F,workspaceopt, allfloat"
       "$modifier SHIFT, P, togglefloating,"
       "$modifier SHIFT, P, pin,"
-      "$modifier SHIFT, C, exit,"
       "$modifier SHIFT, left, movewindow,l"
       "$modifier SHIFT, right, movewindow,r"
       "$modifier SHIFT, up, movewindow,u"

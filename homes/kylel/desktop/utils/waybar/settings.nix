@@ -14,8 +14,7 @@
     ];
     "modules-right" = [
       "tray"
-      "pulseaudio"
-      "battery"
+      # "pulseaudio"
       "clock"
       "custom/notification"
     ];
@@ -26,6 +25,7 @@
       "tooltip" = false;
     };
     "wlr/taskbar" = {
+      "all-outputs" = false;
       "format" = "{icon}";
       "icon-size" = 24;
       "tooltip-format" = "{title}";
@@ -58,55 +58,30 @@
       "spacing" = 10;
       "reverse-direction" = true;
     };
-    "pulseaudio" = {
-      "on-click" = "sleep 0.1 && pavucontrol";
-      "tooltip-format" = "{desc}: {volume}%";
-
-      "format" = "{icon}{format_source}";
-      "format-muted" = "{format_source}";
-      "format-source" = ""; # "";
-      "format-source-muted" = " ";
-      "format-bluetooth" = "{icon}|{format_source}";
-      "format-bluetooth-muted" = "|{format_source}";
-      "format-icons" = {
-        "car" = "";
-        "default" = [
-          ""
-          ""
-          ""
-        ];
-        "hands-free" = "";
-        "headphone" = "";
-        "headset" = "";
-        "phone" = "";
-        "portable" = "";
-      };
-    };
-    "battery" = {
-      "on-click" = "";
-      "interval" = 15;
-      "states" = {
-        "warning" = 25;
-        "critical" = 10;
-      };
-
-      "format" = "{icon}";
-      "format-charging" = "󰂄";
-      "format-icons" = [
-        "󰁺"
-        "󰁻"
-        "󰁼"
-        "󰁽"
-        "󰁾"
-        "󰁿"
-        "󰂀"
-        "󰂁"
-        "󰂂"
-        "󰁹"
-      ];
-      "format-plugged" = "󱘖 ";
-      "tooltip-format" = "Battery: {capacity}%";
-    };
+    # "pulseaudio" = {
+    #   "on-click" = "sleep 0.1 && pavucontrol";
+    #   "tooltip-format" = "{desc}: {volume}%";
+    #
+    #   "format" = "{icon}{format_source}";
+    #   "format-muted" = "{format_source}";
+    #   "format-source" = ""; # "";
+    #   "format-source-muted" = " ";
+    #   "format-bluetooth" = "{icon}|{format_source}";
+    #   "format-bluetooth-muted" = "|{format_source}";
+    #   "format-icons" = {
+    #     "car" = "";
+    #     "default" = [
+    #       ""
+    #       ""
+    #       ""
+    #     ];
+    #     "hands-free" = "";
+    #     "headphone" = "";
+    #     "headset" = "";
+    #     "phone" = "";
+    #     "portable" = "";
+    #   };
+    # };
     "clock" = {
       "format" = "<span><small>{:%H:%M %p%n%D}</small></span>";
       "tooltip" = true;
@@ -127,7 +102,7 @@
         "none" = "";
         "notification" = "<span foreground='red'><sup></sup></span>";
       };
-      "on-click" = "sleep 0.1 && task-waybar";
+      "on-click" = "swaync-launcher";
       "return-type" = "json";
       "tooltip" = false;
     };

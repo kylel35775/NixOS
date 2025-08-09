@@ -1,5 +1,6 @@
 {
   imports = [
+    ./audio-video.nix
     ./boot.nix
     ./filesystem.nix
     ./flatpak.nix

@@ -41,7 +41,7 @@
 
         "window" = {
           transparency = "real";
-          width = mkLiteral "1000px";
+          width = mkLiteral "500px";
           location = mkLiteral "center";
           anchor = mkLiteral "center";
           fullscreen = false;
@@ -58,23 +58,22 @@
           spacing = mkLiteral "0px";
           orientation = mkLiteral "horizontal";
           children = map mkLiteral [
-            "imagebox"
             "listbox"
           ];
           background-color = mkLiteral "transparent";
         };
 
-        "imagebox" = {
-          padding = mkLiteral "20px";
-          background-color = mkLiteral "transparent";
-          background-image = mkLiteral ''url("~/Pictures/Wallpapers/Rainnight.jpg", height)'';
-          orientation = mkLiteral "vertical";
-          children = map mkLiteral [
-            "inputbar"
-            "dummy"
-            "mode-switcher"
-          ];
-        };
+        # "imagebox" = {
+        #   padding = mkLiteral "20px";
+        #   background-color = mkLiteral "transparent";
+        #   background-image = mkLiteral ''url("~/Pictures/Wallpapers/Rainnight.jpg", height)'';
+        #   orientation = mkLiteral "vertical";
+        #   children = map mkLiteral [
+        #     "inputbar"
+        #     "dummy"
+        #     "mode-switcher"
+        #   ];
+        # };
 
         "listbox" = {
           spacing = mkLiteral "20px";
@@ -82,8 +81,10 @@
           background-color = mkLiteral "transparent";
           orientation = mkLiteral "vertical";
           children = map mkLiteral [
+            "inputbar"
             "message"
             "listview"
+            "mode-switcher"
           ];
         };
 

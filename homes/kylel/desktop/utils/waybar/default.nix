@@ -1,4 +1,4 @@
-let
+{config, ...}: let
   settings = import ./settings.nix;
   style = import ./style.nix;
 in {
@@ -8,6 +8,7 @@ in {
     systemd.enable = true;
 
     inherit settings;
-    inherit style;
+    # inherit style;
+    style = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/Documents/dotfiles/config/waybar/style.css";
   };
 }

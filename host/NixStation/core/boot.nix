@@ -12,9 +12,13 @@
     kernel.sysctl = {"vm.max_map_count" = 2147483642;};
 
     loader = {
-      systemd-boot.enable = true;
-      systemd-boot.configurationLimit = 20;
+      timeout = 0; # Disable boot menu, automatically select default generation (Most Recent)
       efi.canTouchEfiVariables = true;
+
+      systemd-boot = {
+        enable = true;
+        configurationLimit = 20;
+      };
     };
 
     # Appimage Support

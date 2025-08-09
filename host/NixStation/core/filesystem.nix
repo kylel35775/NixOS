@@ -4,6 +4,8 @@
     fsType = "ntfs";
 
     options = [
+      "uid=1000"
+      "gid=100"
       "defaults"
       "nofail"
       "rw"

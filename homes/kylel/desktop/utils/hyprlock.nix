@@ -43,7 +43,7 @@
           color = "rgba(255, 255, 255, 1)";
           font_size = 18;
           font_family = "JetBrains Mono Nerd Font Mono";
-          position = "185px, 150px";
+          position = "185px, 25px";
           halign = "left";
           valign = "bottom";
         }

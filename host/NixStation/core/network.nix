@@ -1,10 +1,13 @@
 {
-  pkgs,
   host,
   options,
   ...
 }: {
-  environment.systemPackages = with pkgs; [networkmanagerapplet];
+  # System tray indicator for NetworkManager
+  programs.nm-applet = {
+    enable = true;
+    indicator = true;
+  };
 
   networking = {
     networkmanager.enable = true;
