@@ -156,13 +156,13 @@
         markdown.enable = true;
         ts = {
           enable = true;
-          format.type = "prettier";
+          format.type = "prettierd";
         };
         html.enable = true;
         lua.enable = true;
         css = {
           enable = true;
-          format.type = "prettier";
+          format.type = "prettierd";
         };
         rust = {
           enable = true;

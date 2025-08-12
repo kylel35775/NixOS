@@ -27,9 +27,11 @@
     "wlr/taskbar" = {
       "all-outputs" = false;
       "format" = "{icon}";
-      "icon-size" = 24;
+      "icon-size" = 26;
       "tooltip-format" = "{title}";
       "on-click" = "activate";
+      "on-click-middle" = "close";
+
       "ignore-list" = [
         "Alacritty"
       ];

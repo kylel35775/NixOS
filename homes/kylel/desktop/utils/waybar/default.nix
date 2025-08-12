@@ -1,10 +1,15 @@
-{config, ...}: let
+{
+  pkgs-unstable,
+  config,
+  ...
+}: let
   settings = import ./settings.nix;
   style = import ./style.nix;
 in {
   # Configure & Theme Waybar
   programs.waybar = {
     enable = true;
+    package = pkgs-unstable.waybar;
     systemd.enable = true;
 
     inherit settings;

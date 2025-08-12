@@ -10,6 +10,7 @@
     ./swaync.nix
     ./swayosd.nix
     ./swww.nix
+    ./variety.nix
     ./waybar
     ./wlogout
     ./wl-clipboard.nix

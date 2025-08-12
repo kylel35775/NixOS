@@ -29,6 +29,7 @@
     eza # Beautiful ls Replacement
     ffmpeg # Terminal Video / Audio Editing
     file-roller # Archive Manager
+    font-manager # GTK-Based Font Viewer/Manager
     gedit # Simple Graphical Text Editor
     gitui # TUI For Git Version Control
     glxinfo # Needed for inxi diag util
