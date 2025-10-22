@@ -55,10 +55,11 @@ in {
           ShowHiddenChannels.enabled = true;
           ShowMeYourName.enabled = true;
           ShowTimeoutDuration.enabled = true;
-          SilentMessageToggle = {
+          SilentTyping = {
             enabled = true;
-            persistState = true;
-            autoDisable = false;
+            showIcon = true;
+            contextMenu = false;
+            isEnabled = true;
           };
           TypingIndicator.enabled = true;
           UserVoiceShow.enabled = true;

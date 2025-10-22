@@ -9,6 +9,7 @@
     (import ./nvim-launcher.nix {inherit pkgs;})
     (import ./playerctlock.nix {inherit pkgs;})
     (import ./rofi-launcher.nix {inherit pkgs;})
+    (import ./screenshot.nix {inherit pkgs;})
     (import ./swaync-launcher.nix {inherit pkgs;})
     (import ./wallsetter.nix {inherit pkgs;})
     (import ./wallrizz-launcher.nix {inherit pkgs;})

@@ -21,6 +21,7 @@
     bc # GNU Software Calculator
     beets # CLI Music Tagger and Library Organizer
     binsider # TUI Binary Analyzer
+    blueman # GTK-Based Bluetooth Manager
     brave # Brave Browser
     brightnessctl # For Screen Brightness Control
     docker-compose # Allows Controlling Docker From A Single File
@@ -54,6 +55,7 @@
     nixfmt-rfc-style # Nix Formatter
     nwg-displays #configure monitor configs via GUI
     obs-studio # Desktop Recording Software
+    onlyoffice-desktopeditors # MS Office Suite Alternative
     pavucontrol # For Editing Audio Levels & Devices
     pciutils # Collection Of Tools For Inspecting PCI Devices
     pkg-config # Wrapper Script For Allowing Packages To Get Info On Others
@@ -70,6 +72,7 @@
     v4l-utils # Used For Things Like OBS Virtual Camera
     vivaldi # Chromium Based Browser with Ad/Tracker Blocker
     vlc # Cross-Platform Media Player and Streaming Server
+    vscodium # VS Code without MS telemetry
     wev # Wayland Event Viewer
     wget # Tool For Fetching Files With Links
     yt-dlp # Tool For Downloading Internet Media from YouTube, SoundCloud, etc.

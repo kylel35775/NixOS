@@ -1,6 +1,6 @@
 {
   services.pasystray = {
-    enable = true;
+    enable = false;
 
     extraOptions = [
       "--notify=none"

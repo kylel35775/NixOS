@@ -23,7 +23,11 @@ in {
 
     portal = {
       enable = true;
-      extraPortals = [pkgs.xdg-desktop-portal-hyprland];
+      extraPortals = with pkgs; [
+        xdg-desktop-portal
+        xdg-desktop-portal-wlr
+        xdg-desktop-portal-hyprland
+      ];
       configPackages = [pkgs.hyprland];
     };
 

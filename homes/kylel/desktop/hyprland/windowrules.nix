@@ -35,6 +35,7 @@ in {
         "tag +settings, class:(nwg-displays)"
         "tag +settings, class:(clipse)"
         "tag +settings, class:(wallrizz)"
+        "tag +settings, class:^(org.keepassxc.KeePassXC)$"
 
         # Center
         "center, class:^([Ff]erdium)$"
@@ -74,7 +75,7 @@ in {
         "opacity 0.9 0.8, tag:projects*"
         "opacity 0.9 0.8, tag:file-manager*"
         "opacity 0.9 0.8, tag:terminal*"
-        "opacity 0.8 0.7, tag:settings*"
+        "opacity 1.0 0.9, tag:settings*"
         "opacity 0.8 0.7, class:^(gedit|org.gnome.TextEditor|mousepad)$"
         "opacity 0.9 0.8, class:^(seahorse)$ # gnome-keyring gui"
         "opacity 0.8 0.7, class:^([Rr]hythmbox)$"
@@ -94,10 +95,10 @@ in {
         "noanim, class:flameshot, title:flameshot"
         "norounding, class:flameshot, title:flameshot"
         "noborder, class:flameshot, title:flameshot"
-        "stayfocused, class:flameshot, title:flameshot"
         "float, class:flameshot"
         "pin, class:flameshot, title:flameshot"
         "move 0 0, class:flameshot, title:flameshot"
+        "fullscreenstate, class:flameshot, title:flameshot"
       ];
 
       layerrule = [

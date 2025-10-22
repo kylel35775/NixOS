@@ -3,11 +3,14 @@
     ./flameshot.nix
     ./hypridle.nix
     ./hyprland-qtutils.nix
+    ./hyprshot.nix
     ./hyprlock.nix
     ./hyprpicker.nix
+    ./hyprpanel.nix
     ./hyprpolkitagent.nix
+    ./ksnip.nix
     ./pasystray.nix
-    ./swaync.nix
+    ./swaync
     ./swayosd.nix
     ./swww.nix
     ./variety.nix

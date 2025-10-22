@@ -8,7 +8,7 @@ in {
       "$modifier SHIFT, Return, exec, rofi-launcher"
       "$modifier, N, exec, swaync-launcher"
       "$modifier SHIFT, N, exec, swaync-client -rs"
-      "$modifier SHIFT, S, exec, flameshot-gui"
+      "$modifier SHIFT, S, exec, screenshot"
       "$modifier, B, exec,${browser}"
       "$modifier, Y, exec, kitty -e yazi"
       "$modifier, E, exec, emoji-picker"
@@ -93,21 +93,32 @@ in {
 
     # bind[l] - Allow keybinds to bypass lock screen
     bindl = [
-      ", XF86AudioRaiseVolume, exec, swayosd-client --output-volume=raise"
-      ", XF86AudioLowerVolume, exec, swayosd-client --output-volume=lower"
-      ", XF86AudioMute, exec, swayosd-client --output-volume=mute-toggle"
-      ", XF86AudioMicMute, exec, swayosd-client --input-volume=mute-toggle"
+      # ", XF86AudioRaiseVolume, exec, swayosd-client --output-volume=raise"
+      # ", XF86AudioLowerVolume, exec, swayosd-client --output-volume=lower"
+      # ", XF86AudioMute, exec, swayosd-client --output-volume=mute-toggle"
+      # ", XF86AudioMicMute, exec, swayosd-client --input-volume=mute-toggle"
+      ", XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_SINK@ 5%+"
+      ", XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_SINK@ 5%-"
+      ", XF86AudioMute, exec, wpctl set-mute @DEFAULT_SINK@ toggle"
+      ", XF86AudioMicMute, exec, wpctl set-mute @DEFAULT_SOURCE@ toggle"
 
-      ", XF86AudioPlay, exec, swayosd-client --playerctl=play-pause"
-      ", XF86AudioPause, exec, swayosd-client --playerctl=play-pause"
-      ", XF86AudioStop, exec, swayosd-client --playerctl=stop"
-      ", XF86AudioPrev, exec, swayosd-client --playerctl=prev"
-      ", XF86AudioNext, exec, swayosd-client --playerctl=next"
+      # ", XF86AudioPlay, exec, swayosd-client --playerctl=play-pause"
+      # ", XF86AudioPause, exec, swayosd-client --playerctl=play-pause"
+      # ", XF86AudioStop, exec, swayosd-client --playerctl=stop"
+      # ", XF86AudioPrev, exec, swayosd-client --playerctl=prev"
+      # ", XF86AudioNext, exec, swayosd-client --playerctl=next"
+      ", XF86AudioPlay, exec, playerctl play"
+      ", XF86AudioPause, exec, playerctl pause"
+      ", XF86AudioStop, exec, playerctl stop"
+      ", XF86AudioPrev, exec, playerctl previous"
+      ", XF86AudioNext, exec, playerctl next"
 
-      ", XF86MonBrightnessUp, exec, swayosd-client --brightness=raise"
-      ", XF86MonBrightnessDown, exec, swayosd-client --brightness=lower"
+      # ", XF86MonBrightnessUp, exec, swayosd-client --brightness=raise"
+      # ", XF86MonBrightnessDown, exec, swayosd-client --brightness=lower"
+      ", XF86MonBrightnessUp, exec, brightnessctl set +5%"
+      ", XF86MonBrightnessDown, exec, brightnessctl set 5%-"
 
-      ", caps_lock, exec, swayosd-client --caps-lock"
+      # ", caps_lock, exec, swayosd-client --caps-lock"
     ];
 
     # bind[m] - Mouse keybinds

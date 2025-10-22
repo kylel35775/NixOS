@@ -85,6 +85,7 @@
     #   };
     # };
     "clock" = {
+      "on-click" = "morgen %U";
       "format" = "<span><small>{:%H:%M %p%n%D}</small></span>";
       "tooltip" = true;
       "tooltip-format" = "<big>{:%A, %d.%B %Y }</big>\n<tt><small>{calendar}</small></tt>";
