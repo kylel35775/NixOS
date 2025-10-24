@@ -53,7 +53,11 @@ in {
           ShikiCodeblocks.enabled = true;
           ShowConnections.enabled = true;
           ShowHiddenChannels.enabled = true;
-          ShowMeYourName.enabled = true;
+          ShowMeYourName = {
+            enabled = true;
+            mode = "Nickname then username";
+            friendNicknames = "Show friend nicknames only in direct messages";
+          };
           ShowTimeoutDuration.enabled = true;
           SilentTyping = {
             enabled = true;

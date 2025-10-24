@@ -72,7 +72,7 @@ in {
 
         # Opacity
         "opacity 1.0 1.0, tag:browser*"
-        "opacity 0.9 0.8, tag:projects*"
+        "opacity 1.0 0.9, tag:projects*"
         "opacity 0.9 0.8, tag:file-manager*"
         "opacity 0.9 0.8, tag:terminal*"
         "opacity 1.0 0.9, tag:settings*"
