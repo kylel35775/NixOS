@@ -86,6 +86,9 @@ in {
       "$modifier, mouse_down, workspace, e+1"
       "$modifier, mouse_up, workspace, e-1"
 
+      # System
+      "$modifier, L, exec, hyprlock"
+
       # Function keys
       ", Print, exec, flameshot screen"
       # ",XF86PowerOff"
