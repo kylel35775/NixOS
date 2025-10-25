@@ -107,7 +107,7 @@ in {
       # ", XF86AudioStop, exec, swayosd-client --playerctl=stop"
       # ", XF86AudioPrev, exec, swayosd-client --playerctl=prev"
       # ", XF86AudioNext, exec, swayosd-client --playerctl=next"
-      ", XF86AudioPlay, exec, playerctl play"
+      ", XF86AudioPlay, exec, playerctl play-pause"
       ", XF86AudioPause, exec, playerctl pause"
       ", XF86AudioStop, exec, playerctl stop"
       ", XF86AudioPrev, exec, playerctl previous"
