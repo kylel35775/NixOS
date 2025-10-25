@@ -43,7 +43,6 @@
     inxi # CLI System Information Tool
     jq # CLI JSON Processor
     kdePackages.okular # PDF Viewer/Basic Editor
-    keepassxc # Offline Password Manager
     killall # For Killing All Instances Of Programs
     libnotify # For Notifications
     libreoffice # Comprehensive Productivity Suite

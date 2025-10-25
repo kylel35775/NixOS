@@ -102,6 +102,10 @@ in {
       ];
 
       layerrule = [
+        "blur, bar-0"
+        "ignorezero, bar-0"
+        "ignorealpha, 0.5, bar-0"
+
         "blur, waybar"
         "ignorezero, waybar"
         "ignorealpha, 0.5, waybar"

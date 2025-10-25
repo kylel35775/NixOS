@@ -1,8 +1,9 @@
 {
   imports = [
     ./ghostty.nix
-    ./morgen.nix
+    ./keepassxc.nix
     ./kitty.nix
+    ./morgen.nix
     ./obsidian.nix
     ./rofi
     ./thunar.nix

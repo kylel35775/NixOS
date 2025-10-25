@@ -55,8 +55,8 @@ in {
           ShowHiddenChannels.enabled = true;
           ShowMeYourName = {
             enabled = true;
-            mode = "Nickname then username";
-            friendNicknames = "Show friend nicknames only in direct messages";
+            mode = "nick-user";
+            friendNicknames = "dms";
           };
           ShowTimeoutDuration.enabled = true;
           SilentTyping = {

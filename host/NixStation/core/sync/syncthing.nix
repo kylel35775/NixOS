@@ -16,12 +16,17 @@ in {
       options.urAccepted = -1; # Reject anonymous data collection
 
       devices = {
+        C-PF5YSYJH = {
+          id = "DDQXX3Y-BAC6ADL-OKA7IED-MH4AWL4-JGQQ7FY-ITWJLTX-ZYWNLLT-FHF3CAY";
+          autoAcceptFolders = true;
+        };
+
         LenovoC940 = {
           id = "5EU3VZC-MGG4SIT-3TZ5YNT-CALZDDJ-YBXPILT-YA5DE4N-K4FECM6-HDYRAAF";
           autoAcceptFolders = true;
         };
 
-        Pixel3 = {
+        Pixel9a = {
           id = "TABHFLR-US7QC5H-XIE4PZN-RX5PIMN-QNMW3FJ-HL5QN5U-VHSP5NI-IIMXTQQ";
           autoAcceptFolders = true;
         };
@@ -34,7 +39,7 @@ in {
 
           devices = [
             "LenovoC940"
-            "Pixel3"
+            "Pixel9a"
           ];
         };
       };
