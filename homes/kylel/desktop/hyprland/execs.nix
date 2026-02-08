@@ -4,5 +4,8 @@
     "systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
     "variety"
     "pypr &"
+    "[workplace 1 silent] steam"
+    "[workplace 2 silent] vesktop"
+    "[workplace 3 silent] $DEFAULT_BROWSER"
   ];
 }

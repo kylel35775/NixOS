@@ -37,6 +37,13 @@ in {
         "tag +settings, class:(wallrizz)"
         "tag +settings, class:^(org.keepassxc.KeePassXC)$"
 
+        # Workspace
+        "workspace 1 silent, tag:games*"
+        "workspace 1 silent, tag:gamestore*"
+        "workspace 2 silent, tag:im*"
+        "workspace 3 silent, tag:browser*"
+        "workspace 0 silent, tag:projects*"
+
         # Center
         "center, class:^([Ff]erdium)$"
         "center, class:^(pavucontrol|org.pulseaudio.pavucontrol|com.saivert.pwvucontrol)$"

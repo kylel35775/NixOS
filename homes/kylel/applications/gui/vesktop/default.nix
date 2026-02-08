@@ -31,7 +31,12 @@ in {
           GameActivityToggle.enabled = true;
           GifPaste.enabled = true;
           HideMedia.enabled = true;
-          ImageZoom.enabled = true;
+          ImageZoom = {
+            enabled = true;
+            square = true;
+            zoom = 0;
+            size = 400;            
+          };
           ImplicitRelationships.enabled = true;
           IrcColors.enabled = true;
           MemberCount.enabled = true;

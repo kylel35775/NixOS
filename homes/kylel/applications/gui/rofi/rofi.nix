@@ -3,14 +3,9 @@
   config,
   ...
 }: {
-  home.packages = with pkgs; [
-    rofi-power-menu
-  ];
-
   programs = {
     rofi = {
       enable = true;
-      package = pkgs.rofi-wayland;
       plugins = [];
 
       extraConfig = {

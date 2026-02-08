@@ -29,6 +29,8 @@
         8009 # Chromecast
 
         8384 # Syncthing
+
+        42420 # Vintage Story Server
       ];
       allowedTCPPortRanges = [
         {
@@ -63,6 +65,8 @@
         35630 #
         35640 #
         35650 #
+
+        42420 # Vintage Story Server
       ];
       allowedUDPPortRanges = [
         {

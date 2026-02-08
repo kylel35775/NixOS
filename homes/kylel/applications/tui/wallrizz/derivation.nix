@@ -24,7 +24,7 @@
     exec = "kitty --class wallrizz --single-instance -o allow_remote_control=yes WallRizz --disable-notification --preview-mode list";
     terminal = false;
     type = "Application";
-    mimeTypes = ["image/jpeg" "image/png" "image/gif"];
+    mimeTypes = [];
     categories = ["Settings" "Utility" "ConsoleOnly"];
     keywords = ["Wallpaper" "Manager"];
   };

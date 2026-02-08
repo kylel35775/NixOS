@@ -4,6 +4,7 @@
   lib,
   ...
 }: let
+  #browser = ["xdg-open-hypr.desktop" "vivaldi-stable.desktop" "brave-browser.desktop"];
   browser = ["vivaldi-stable.desktop" "brave-browser.desktop"];
   media-player = ["vlc.desktop" "umpv.desktop"];
   pdf-viewer = [""];

@@ -13,6 +13,7 @@
     (import ./swaync-launcher.nix {inherit pkgs;})
     (import ./wallsetter.nix {inherit pkgs;})
     (import ./wallrizz-launcher.nix {inherit pkgs;})
+    # (import ./xdg-open-hypr.nix {inherit pkgs;})
     (import ./yt-music.nix {inherit pkgs;})
   ];
 }

@@ -9,13 +9,12 @@ in {
     settings = {
       scalingPriority = "hyprland";
 
-
       wallpaper = {
         enable = false;
         inherit image;
       };
 
-
+      # ================= BAR ================= #
       bar = {
         layouts = {
           "*" = {
@@ -25,7 +24,7 @@ in {
           };
         };
 
-        # ===== Left ===== #
+        # ----- Left -----
         launcher = {
           autoDetectIcon = true;
         };
@@ -36,8 +35,7 @@ in {
           truncation_size = 45;
         };
 
-
-        # ===== Middle ===== #
+        # ----- Middle -----
         workspaces = {
           show_icons = false; # 
           showWsIcons = true;
@@ -45,8 +43,7 @@ in {
           applicationIconOncePerWorkspace = true;
         };
 
-
-        # ===== Right ===== #
+        # ----- Right -----
         systray = {};
 
         volume = {
@@ -70,7 +67,7 @@ in {
         };
       };
 
-
+      # ================= MENUS ================= #
       menus = {
         dashboard = {
           powermenu.logout = "loginctl terminate-user ${config.home.username}";
@@ -120,8 +117,7 @@ in {
         volume.raiseMaximumVolume = true;
       };
 
-
-      # THEME
+      # ================= THEME ================= #
       theme = {
         font = {
           name = "CaskaydiaCove NF";
@@ -142,7 +138,7 @@ in {
           };
 
           transparent = false; # Bar Background
-          opacity = 75;
+          opacity = 50;
           outer_spacing = "0.2em"; # Left-Right Bar Padding
           
           # Floating Settings

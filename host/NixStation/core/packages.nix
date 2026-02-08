@@ -33,8 +33,7 @@
     font-manager # GTK-Based Font Viewer/Manager
     gedit # Simple Graphical Text Editor
     gitui # TUI For Git Version Control
-    glxinfo # Needed for inxi diag util
-    greetd.tuigreet # The Login Manager (Sometimes Referred To As Display Manager)
+    tuigreet # The Login Manager (Sometimes Referred To As Display Manager)
     heroic # Native GOG, Epic, and Amazon Games Launcher for Linux, Windows and Mac
     home-manager # Home Manager CLI
     htop # Simple Terminal Based System Monitor
@@ -48,6 +47,7 @@
     libreoffice # Comprehensive Productivity Suite
     lm_sensors # Used For Getting Hardware Temps
     lshw # Detailed Hardware Information
+    mesa-demos # Collection of demos and test programs for OpenGL and Mesa
     mpv # Incredible Video Player
     ncdu # Disk Usage Analyzer With Ncurses Interface
     nodejs
